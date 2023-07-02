@@ -1,4 +1,4 @@
-import {FieldMember, ObjectFieldProps} from 'sanity'
+import {ObjectFieldProps} from 'sanity'
 import {I18nFieldsConfig} from '../types/I18nFields'
 import useSetupCssVars from '../hooks/useSetupCssVars'
 import useValidation from '../hooks/useValidation'
@@ -16,7 +16,7 @@ const I18nDefaultField = (
   // setting up css variables
   useSetupCssVars()
   // get all validation errors, object errors and single field error
-  const {mergedValidation} = useValidation(validation, members as FieldMember[])
+  const {mergedValidation} = useValidation(validation, members)
   return renderDefault({...props, validation: mergedValidation})
 }
 
