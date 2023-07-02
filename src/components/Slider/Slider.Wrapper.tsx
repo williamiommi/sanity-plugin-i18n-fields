@@ -3,7 +3,7 @@ import 'keen-slider/keen-slider.min.css'
 import {useKeenSlider} from 'keen-slider/react'
 import {I18nFieldsConfigUI} from '../../types/I18nFields'
 import {InternalLocale} from '../../types/Locale'
-import Slide from './Slide'
+import Slide from './Slider.Slide'
 
 interface WrapperProps {
   name: string | undefined
