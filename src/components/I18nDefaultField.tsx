@@ -5,7 +5,7 @@ import useValidation from '../hooks/useValidation'
 
 const I18nDefaultField = (
   props: ObjectFieldProps,
-  config: I18nFieldsConfig,
+  pluginConfig: I18nFieldsConfig,
   fieldType: 'string' | 'text'
 ) => {
   const {
