@@ -3,6 +3,7 @@ import {I18nFieldsConfig} from '../types/I18nFields'
 import useSetupCssVars from '../hooks/useSetupCssVars'
 import useValidationInfo from '../hooks/useValidationInfo'
 import useLocalesInfo from '../hooks/useLocalesInfo'
+import useUiInfo from '../hooks/useUiInfo'
 
 const I18nDefaultField = (
   props: ObjectFieldProps,
@@ -29,6 +30,8 @@ const I18nDefaultField = (
     fieldReadOnly,
     currentPath,
   })
+  // merge global and field ui options
+  useUiInfo(pluginConfig.ui, fieldOptions.ui)
   return renderDefault({...props, validation: mergedValidation})
 }
 
