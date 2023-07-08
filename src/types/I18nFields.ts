@@ -7,7 +7,7 @@ export interface I18nFieldsConfigUI {
 }
 
 export interface I18nStringOptions {
-  locales: I18nStringLocale[]
+  locales?: I18nStringLocale[]
   ui?: I18nFieldsConfigUI
 }
 

@@ -1,5 +1,5 @@
 import {ReactNode} from 'react'
-import {ConditionalProperty} from 'sanity'
+import {ConditionalProperty, StringOptions} from 'sanity'
 
 export interface Locale {
   code: string
@@ -23,4 +23,6 @@ export interface I18nStringLocale
   extends Omit<
     InternalLocale,
     'label' | 'title' | 'default' | 'hasError' | 'isReadOnly' | 'isHidden'
-  > {}
+  > {
+  options?: StringOptions
+}

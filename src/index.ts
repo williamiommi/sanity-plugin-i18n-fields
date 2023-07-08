@@ -1,3 +1,5 @@
-export {type I18nFieldsConfig} from './types/I18nFields'
-export {type Locale} from './types/Locale'
 export {I18nFields} from './plugin'
+
+export * from './types/I18nFields'
+export * from './types/Locale'
+export * from './types/Sanity'

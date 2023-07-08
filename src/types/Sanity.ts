@@ -1,9 +1,12 @@
-import {ObjectDefinition} from 'sanity'
+import {ObjectDefinition, ObjectOptions} from 'sanity'
 import {I18nStringOptions} from './I18nFields'
 
-export type I18nStringDefinition = Omit<ObjectDefinition, 'fields'> & {
+export type I18nStringDefinition = Omit<
+  ObjectDefinition,
+  'type' | 'fields' | 'components' | 'options'
+> & {
   type: 'i18n.string'
-  options?: I18nStringOptions
+  options?: I18nStringOptions & Omit<ObjectOptions, 'columns'>
 }
 
 // redeclares sanity module so we can add interfaces props to it
