@@ -1,15 +1,15 @@
 import {useMemo} from 'react'
 import {FieldMember, FormNodeValidation, ObjectMember} from 'sanity'
 
-interface useValidationResponse {
+interface useValidationInfoResponse {
   hasGlobalError: boolean
   mergedValidation: FormNodeValidation[]
 }
 
-const useValidation = (
+const useValidationInfo = (
   globalValidation: FormNodeValidation[],
   members: ObjectMember[]
-): useValidationResponse => {
+): useValidationInfoResponse => {
   // get all validation erros from every single locale and create a single array of errors
   const allLocalesValidation = useMemo(() => {
     const output: FormNodeValidation[] = []
@@ -25,4 +25,4 @@ const useValidation = (
   }
 }
 
-export default useValidation
+export default useValidationInfo
