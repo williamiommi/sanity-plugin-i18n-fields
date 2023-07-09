@@ -1,3 +1,5 @@
+import './style/style.scss'
+
 export {I18nFields} from './plugin'
 
 export * from './types/I18nFields'
