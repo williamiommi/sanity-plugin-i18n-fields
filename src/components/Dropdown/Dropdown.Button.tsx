@@ -1,6 +1,5 @@
 import {Box, Button, Text, Tooltip, useTheme} from '@sanity/ui'
-import {ErrorOutlineIcon} from '@sanity/icons'
-import {SelectIcon} from '@sanity/icons'
+import {ErrorOutlineIcon, SelectIcon} from '@sanity/icons'
 import {InternalLocale} from '../../types/Locale'
 
 interface DropdownButtonProps {

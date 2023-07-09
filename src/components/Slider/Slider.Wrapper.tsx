@@ -9,7 +9,7 @@ interface SliderWrapperProps {
   name: string | undefined
   pluginUi: I18nFieldsConfigUI
   locales: InternalLocale[]
-  activeLocale: InternalLocale | undefined
+  activeLocale: InternalLocale
   onClick: (e: FormEvent<HTMLLabelElement>) => void
 }
 const SliderWrapper = ({name, pluginUi, locales, activeLocale, onClick}: SliderWrapperProps) => {
