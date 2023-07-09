@@ -1,6 +1,6 @@
 import {FormEvent} from 'react'
 import {Box, Text, Tooltip, useTheme} from '@sanity/ui'
-import {ErrorOutlineIcon} from '@sanity/icons'
+import {ErrorOutlineIcon, WarningOutlineIcon} from '@sanity/icons'
 import {InternalLocale} from '../../types/Locale'
 import {I18nFieldsConfigUI} from '../../types/I18nFields'
 
@@ -42,6 +42,12 @@ const Slide = ({name, locale, index, isSelected, pluginUi, onClick}: SlideProps)
         {locale.hasError && (
           <ErrorOutlineIcon
             color={sanityTheme.sanity.color.solid.critical.enabled.bg}
+            fontSize={12}
+          />
+        )}
+        {locale.hasWarning && (
+          <WarningOutlineIcon
+            color={sanityTheme.sanity.color.solid.caution.enabled.bg}
             fontSize={12}
           />
         )}

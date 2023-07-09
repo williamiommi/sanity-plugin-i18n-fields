@@ -1,5 +1,5 @@
 import {Box, MenuItem, Text, Tooltip, useTheme} from '@sanity/ui'
-import {ErrorOutlineIcon} from '@sanity/icons'
+import {ErrorOutlineIcon, WarningOutlineIcon} from '@sanity/icons'
 import {MouseEvent} from 'react'
 import {InternalLocale} from '../../types/Locale'
 
@@ -32,7 +32,13 @@ const DropdownMenuItem = ({locale, onSelectLocale}: DropdownMenuItemProps) => {
           {locale.hasError && (
             <ErrorOutlineIcon
               color={sanityTheme.sanity.color.solid.critical.enabled.bg}
-              fontSize="1rem"
+              fontSize={12}
+            />
+          )}
+          {locale.hasWarning && (
+            <WarningOutlineIcon
+              color={sanityTheme.sanity.color.solid.caution.enabled.bg}
+              fontSize={12}
             />
           )}
           <span className="-label">{locale.label}</span>

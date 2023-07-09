@@ -12,6 +12,7 @@ export interface Locale {
 
 export interface InternalLocale extends Locale {
   hasError?: boolean
+  hasWarning?: boolean
   isReadOnly?: boolean
   isHidden?: boolean
   readOnly?: ConditionalProperty
