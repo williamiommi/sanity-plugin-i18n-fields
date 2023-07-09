@@ -15,7 +15,7 @@ interface SliderWrapperProps {
 const SliderWrapper = ({name, pluginUi, locales, activeLocale, onClick}: SliderWrapperProps) => {
   const [ready, setReady] = useState(false)
   const sliderRef = useRef(null)
-  const [keenRef] = useKeenSlider(
+  const [keenRef, keenSlider] = useKeenSlider(
     {
       mode: 'free',
       slides: {perView: 'auto'},
@@ -27,6 +27,10 @@ const SliderWrapper = ({name, pluginUi, locales, activeLocale, onClick}: SliderW
     keenRef(sliderRef.current)
     setReady(true)
   }, [keenRef])
+
+  useEffect(() => {
+    if (ready) keenSlider.current?.update()
+  }, [locales, ready, keenSlider])
 
   return (
     <div
