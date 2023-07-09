@@ -8,6 +8,7 @@ import SliderWrapper from './Slider/Slider.Wrapper'
 import {Stack} from '@sanity/ui'
 import DropdownWrapper from './Dropdown/Dropdown.Wrapper'
 import useMembersInfo from '../hooks/useMembersInfo'
+import useWrapperHeight from '../hooks/useWrapperHeight'
 
 const I18nDefaultField = (
   props: ObjectFieldProps,
@@ -37,7 +38,10 @@ const I18nDefaultField = (
   })
   // merge global and field ui options
   const pluginUI = useUiInfo(pluginConfig.ui, fieldOptions.ui)
+  // get object members with all necessary info
   const parsedMembers = useMembersInfo({members, availableLocales, hasGlobalError, fieldType})
+  // get wrapper height to avoid issue with absolute position
+  const {memberRef, wrapperHeight} = useWrapperHeight()
 
   const DefaultRender = () => (
     <>{renderDefault({...props, validation: mergedValidation, children: null})}</>
@@ -67,14 +71,22 @@ const I18nDefaultField = (
           activeLocale={activeLocale}
         />
       )}
-      <div>
+      <div style={{position: 'relative', height: wrapperHeight}}>
         {parsedMembers.map((member) => {
           return (
-            <div key={member.name}>
+            <div
+              key={member.name}
+              ref={memberRef}
+              style={{
+                position: 'absolute',
+                width: '100%',
+                opacity: `${activeLocale.code === member.name ? '1' : '0'}`,
+              }}
+            >
               <MemberField
                 member={{
                   ...member,
-                  field: {...member.field, schemaType: {...member.field.schemaType, title: ''}},
+                  field: {...member.field, schemaType: {...member.field.schemaType, title: ''}}, // here to avoid issue with the left menu for document errors
                 }}
                 renderField={renderField}
                 renderInput={renderInput}

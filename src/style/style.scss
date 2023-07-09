@@ -22,6 +22,7 @@
   order: 0;
   &[data-position='bottom'] {
     order: 1;
+    margin: 7px 0 0;
   }
 
   &[data-ready='true'] {
