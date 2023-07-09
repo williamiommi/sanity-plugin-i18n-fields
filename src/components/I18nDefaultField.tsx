@@ -1,14 +1,13 @@
-import {FieldMember, MemberField, ObjectFieldProps} from 'sanity'
+import {MemberField, ObjectFieldProps} from 'sanity'
 import {I18nFieldsConfig} from '../types/I18nFields'
 import useSetupCssVars from '../hooks/useSetupCssVars'
 import useValidationInfo from '../hooks/useValidationInfo'
 import useLocalesInfo from '../hooks/useLocalesInfo'
 import useUiInfo from '../hooks/useUiInfo'
 import SliderWrapper from './Slider/Slider.Wrapper'
-import {FormEvent, MouseEvent, useCallback} from 'react'
 import {Stack} from '@sanity/ui'
 import DropdownWrapper from './Dropdown/Dropdown.Wrapper'
-import useMemberInfo from '../hooks/useMemberInfo'
+import useMembersInfo from '../hooks/useMembersInfo'
 
 const I18nDefaultField = (
   props: ObjectFieldProps,
@@ -27,7 +26,7 @@ const I18nDefaultField = (
   useSetupCssVars()
   // get all validation errors, object errors and single field error
   const {hasGlobalError, mergedValidation} = useValidationInfo(validation, members)
-  const {availableLocales, activeLocale, setActiveLocale} = useLocalesInfo({
+  const {availableLocales, activeLocale} = useLocalesInfo({
     locales: pluginConfig.locales,
     members,
     hasGlobalError,
@@ -38,36 +37,13 @@ const I18nDefaultField = (
   })
   // merge global and field ui options
   const pluginUI = useUiInfo(pluginConfig.ui, fieldOptions.ui)
-  const activeMember = useMemberInfo(
-    fieldType,
-    members as FieldMember[],
-    hasGlobalError,
-    activeLocale
-  )
-
-  const onClickSlideHandler = useCallback(
-    (e: FormEvent<HTMLLabelElement>) => {
-      setActiveLocale(
-        availableLocales.find((locale) => locale.code === e.currentTarget.dataset.code)
-      )
-    },
-    [availableLocales, setActiveLocale]
-  )
-
-  const onSelectHandler = useCallback(
-    (e: MouseEvent<HTMLElement>) => {
-      setActiveLocale(
-        availableLocales.find((locale) => locale.code === e.currentTarget.dataset.code)
-      )
-    },
-    [availableLocales, setActiveLocale]
-  )
+  const parsedMembers = useMembersInfo({members, availableLocales, hasGlobalError, fieldType})
 
   const DefaultRender = () => (
     <>{renderDefault({...props, validation: mergedValidation, children: null})}</>
   )
 
-  if (!availableLocales || !activeLocale || !activeMember) return null
+  if (!availableLocales || !activeLocale) return null
 
   if (collapsed) return <DefaultRender />
 
@@ -80,7 +56,6 @@ const I18nDefaultField = (
             name={currentPath}
             locales={availableLocales}
             activeLocale={activeLocale}
-            onSelectLocale={onSelectHandler}
           />
         )}
       </div>
@@ -90,17 +65,26 @@ const I18nDefaultField = (
           pluginUi={pluginUI}
           locales={availableLocales}
           activeLocale={activeLocale}
-          onClick={onClickSlideHandler}
         />
       )}
-      <MemberField
-        key={activeLocale.code}
-        member={activeMember}
-        renderField={renderField}
-        renderInput={renderInput}
-        renderItem={renderItem}
-        renderPreview={renderPreview}
-      />
+      <div>
+        {parsedMembers.map((member) => {
+          return (
+            <div key={member.name}>
+              <MemberField
+                member={{
+                  ...member,
+                  field: {...member.field, schemaType: {...member.field.schemaType, title: ''}},
+                }}
+                renderField={renderField}
+                renderInput={renderInput}
+                renderItem={renderItem}
+                renderPreview={renderPreview}
+              />
+            </div>
+          )
+        })}
+      </div>
     </Stack>
   )
 }

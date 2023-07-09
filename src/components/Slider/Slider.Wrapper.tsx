@@ -1,4 +1,4 @@
-import {FormEvent, useEffect, useRef, useState} from 'react'
+import {useEffect, useRef, useState} from 'react'
 import 'keen-slider/keen-slider.min.css'
 import {useKeenSlider} from 'keen-slider/react'
 import {I18nFieldsConfigUI} from '../../types/I18nFields'
@@ -10,9 +10,8 @@ interface SliderWrapperProps {
   pluginUi: I18nFieldsConfigUI
   locales: InternalLocale[]
   activeLocale: InternalLocale
-  onClick: (e: FormEvent<HTMLLabelElement>) => void
 }
-const SliderWrapper = ({name, pluginUi, locales, activeLocale, onClick}: SliderWrapperProps) => {
+const SliderWrapper = ({name, pluginUi, locales, activeLocale}: SliderWrapperProps) => {
   const [ready, setReady] = useState(false)
   const sliderRef = useRef(null)
   const [keenRef, keenSlider] = useKeenSlider(
@@ -47,7 +46,6 @@ const SliderWrapper = ({name, pluginUi, locales, activeLocale, onClick}: SliderW
           isSelected={activeLocale?.code === locale.code}
           locale={locale}
           pluginUi={pluginUi}
-          onClick={onClick}
         />
       ))}
     </div>

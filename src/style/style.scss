@@ -119,6 +119,10 @@
   > span {
     padding: 2px 5px !important;
   }
+  &:hover {
+    background-color: var(--i18n-bg-hover);
+    border-radius: 3px;
+  }
 }
 
 .i18n--select-language {

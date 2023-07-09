@@ -1,15 +1,13 @@
-import {Box, MenuItem, Text, Tooltip, useTheme} from '@sanity/ui'
-import {ErrorOutlineIcon, WarningOutlineIcon} from '@sanity/icons'
-import {MouseEvent} from 'react'
+import {Box, Text, Tooltip} from '@sanity/ui'
 import {InternalLocale} from '../../types/Locale'
+import ErrorWarningIcons from '../shared/ErrorWarningIcons'
 
 interface DropdownMenuItemProps {
+  name: string
   locale: InternalLocale
-  onSelectLocale: (event: MouseEvent<HTMLElement>) => void
 }
 
-const DropdownMenuItem = ({locale, onSelectLocale}: DropdownMenuItemProps) => {
-  const sanityTheme = useTheme()
+const DropdownMenuItem = ({name = 'title', locale}: DropdownMenuItemProps) => {
   return (
     <>
       <Tooltip
@@ -23,26 +21,16 @@ const DropdownMenuItem = ({locale, onSelectLocale}: DropdownMenuItemProps) => {
         fallbackPlacements={['right', 'left']}
         placement="top"
       >
-        <MenuItem
+        <label
+          id={`${name}-${locale.code}`}
+          htmlFor={`${name}.${locale.code}`}
           className="i18n--dropdown-menu-item"
           data-read-only={locale.isReadOnly}
           data-code={locale.code}
-          onClick={onSelectLocale}
         >
-          {locale.hasError && (
-            <ErrorOutlineIcon
-              color={sanityTheme.sanity.color.solid.critical.enabled.bg}
-              fontSize={12}
-            />
-          )}
-          {locale.hasWarning && (
-            <WarningOutlineIcon
-              color={sanityTheme.sanity.color.solid.caution.enabled.bg}
-              fontSize={12}
-            />
-          )}
+          <ErrorWarningIcons locale={locale} />
           <span className="-label">{locale.label}</span>
-        </MenuItem>
+        </label>
       </Tooltip>
     </>
   )

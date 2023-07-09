@@ -1,6 +1,6 @@
-import {ConditionalProperty, ObjectMember, SanityDocument, useFormValue} from 'sanity'
+import {ConditionalProperty, FieldMember, ObjectMember, SanityDocument, useFormValue} from 'sanity'
 import {I18nStringLocale, InternalLocale, Locale} from '../types/Locale'
-import {Dispatch, SetStateAction, useMemo, useState} from 'react'
+import {useMemo, useRef} from 'react'
 import useUserInfo from './useUserInfo'
 import mergeLocaleConfiguration from '../lib/mergeLocaleConfiguration'
 import validateLocaleRestrictions from '../lib/validateLocaleRestrictions'
@@ -19,7 +19,6 @@ interface useLocalesInfoProps {
 interface useLocalesInfoResponse {
   availableLocales: InternalLocale[]
   activeLocale: InternalLocale | undefined
-  setActiveLocale: Dispatch<SetStateAction<InternalLocale | undefined>>
 }
 
 const useLocalesInfo = ({
@@ -68,9 +67,21 @@ const useLocalesInfo = ({
     ]
   )
 
-  const [activeLocale, setActiveLocale] = useState<InternalLocale | undefined>(availableLocales[0])
+  const prevActiveLocale = useRef<InternalLocale>(availableLocales[0])
 
-  return {availableLocales, activeLocale, setActiveLocale}
+  const focusedMember = useMemo(
+    () => (members as FieldMember[]).find((member) => member.field.focused),
+    [members]
+  )
+
+  const activeLocale = useMemo(() => {
+    const locale = availableLocales.find((curr) => curr.code === focusedMember?.name)
+    if (!locale) return prevActiveLocale.current
+    prevActiveLocale.current = locale
+    return locale
+  }, [availableLocales, focusedMember])
+
+  return {availableLocales, activeLocale}
 }
 
 export default useLocalesInfo

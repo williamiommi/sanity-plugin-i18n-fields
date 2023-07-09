@@ -1,8 +1,7 @@
-import {FormEvent} from 'react'
-import {Box, Text, Tooltip, useTheme} from '@sanity/ui'
-import {ErrorOutlineIcon, WarningOutlineIcon} from '@sanity/icons'
+import {Box, Text, Tooltip} from '@sanity/ui'
 import {InternalLocale} from '../../types/Locale'
 import {I18nFieldsConfigUI} from '../../types/I18nFields'
+import ErrorWarningIcons from '../shared/ErrorWarningIcons'
 
 interface SlideProps {
   name: string | undefined
@@ -10,10 +9,8 @@ interface SlideProps {
   index: number
   isSelected: boolean
   pluginUi: I18nFieldsConfigUI
-  onClick: (e: FormEvent<HTMLLabelElement>) => void
 }
-const Slide = ({name, locale, index, isSelected, pluginUi, onClick}: SlideProps) => {
-  const sanityTheme = useTheme()
+const Slide = ({name, locale, index, isSelected, pluginUi}: SlideProps) => {
   return (
     <Tooltip
       key={locale.code}
@@ -37,20 +34,8 @@ const Slide = ({name, locale, index, isSelected, pluginUi, onClick}: SlideProps)
         data-read-only={locale.isReadOnly}
         data-code={locale.code}
         data-index={index}
-        onClick={onClick}
       >
-        {locale.hasError && (
-          <ErrorOutlineIcon
-            color={sanityTheme.sanity.color.solid.critical.enabled.bg}
-            fontSize={12}
-          />
-        )}
-        {locale.hasWarning && (
-          <WarningOutlineIcon
-            color={sanityTheme.sanity.color.solid.caution.enabled.bg}
-            fontSize={12}
-          />
-        )}
+        <ErrorWarningIcons locale={locale} />
         <div className="-label">{locale.label}</div>
       </label>
     </Tooltip>

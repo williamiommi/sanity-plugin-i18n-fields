@@ -1,13 +1,13 @@
-import {Box, Button, Text, Tooltip, useTheme} from '@sanity/ui'
-import {ErrorOutlineIcon, SelectIcon} from '@sanity/icons'
+import {Box, Button, Text, Tooltip} from '@sanity/ui'
+import {SelectIcon} from '@sanity/icons'
 import {InternalLocale} from '../../types/Locale'
+import ErrorWarningIcons from '../shared/ErrorWarningIcons'
 
 interface DropdownButtonProps {
   activeLocale: InternalLocale
 }
 
 const DropdownButton = ({activeLocale}: DropdownButtonProps) => {
-  const sanityTheme = useTheme()
   return (
     <Button className="i18n--dropdown-button" data-read-only={activeLocale.isReadOnly} mode="ghost">
       <Tooltip
@@ -24,12 +24,7 @@ const DropdownButton = ({activeLocale}: DropdownButtonProps) => {
         placement="top"
       >
         <div className="-content">
-          {activeLocale.hasError && (
-            <ErrorOutlineIcon
-              color={sanityTheme.sanity.color.solid.critical.enabled.bg}
-              fontSize="1rem"
-            />
-          )}
+          <ErrorWarningIcons locale={activeLocale} />
           <span className="-label">{activeLocale.label}</span>
           <SelectIcon mode="ghost" className="-icon" />
         </div>
