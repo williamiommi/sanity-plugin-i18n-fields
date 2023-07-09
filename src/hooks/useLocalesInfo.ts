@@ -18,8 +18,8 @@ interface useLocalesInfoProps {
 
 interface useLocalesInfoResponse {
   availableLocales: InternalLocale[]
-  activeLocale: InternalLocale
-  setActiveLocale: Dispatch<SetStateAction<InternalLocale>>
+  activeLocale: InternalLocale | undefined
+  setActiveLocale: Dispatch<SetStateAction<InternalLocale | undefined>>
 }
 
 const useLocalesInfo = ({
@@ -68,7 +68,7 @@ const useLocalesInfo = ({
     ]
   )
 
-  const [activeLocale, setActiveLocale] = useState<InternalLocale>(availableLocales[0])
+  const [activeLocale, setActiveLocale] = useState<InternalLocale | undefined>(availableLocales[0])
 
   return {availableLocales, activeLocale, setActiveLocale}
 }

@@ -5,14 +5,14 @@ import {I18nFieldsConfigUI} from '../../types/I18nFields'
 import {InternalLocale} from '../../types/Locale'
 import Slide from './Slider.Slide'
 
-interface WrapperProps {
+interface SliderWrapperProps {
   name: string | undefined
   pluginUi: I18nFieldsConfigUI
   locales: InternalLocale[]
-  activeLocale: InternalLocale
+  activeLocale: InternalLocale | undefined
   onClick: (e: FormEvent<HTMLLabelElement>) => void
 }
-const Wrapper = ({name, pluginUi, locales, activeLocale, onClick}: WrapperProps) => {
+const SliderWrapper = ({name, pluginUi, locales, activeLocale, onClick}: SliderWrapperProps) => {
   const [ready, setReady] = useState(false)
   const sliderRef = useRef(null)
   const [keenRef] = useKeenSlider(
@@ -40,7 +40,7 @@ const Wrapper = ({name, pluginUi, locales, activeLocale, onClick}: WrapperProps)
           key={locale.code}
           index={index}
           name={name}
-          isSelected={activeLocale.code === locale.code}
+          isSelected={activeLocale?.code === locale.code}
           locale={locale}
           pluginUi={pluginUi}
           onClick={onClick}
@@ -50,4 +50,4 @@ const Wrapper = ({name, pluginUi, locales, activeLocale, onClick}: WrapperProps)
   )
 }
 
-export default Wrapper
+export default SliderWrapper
