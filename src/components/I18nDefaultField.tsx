@@ -41,7 +41,7 @@ const I18nDefaultField = (
   // get object members with all necessary info
   const parsedMembers = useMembersInfo({members, availableLocales, hasGlobalError, fieldType})
   // get wrapper height to avoid issue with absolute position
-  const {memberRef, wrapperHeight} = useWrapperHeight()
+  const {memberRef, wrapperHeight} = useWrapperHeight(collapsed)
 
   const DefaultRender = () => (
     <>{renderDefault({...props, validation: mergedValidation, children: null})}</>

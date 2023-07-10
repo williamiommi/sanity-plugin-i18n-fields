@@ -5,15 +5,15 @@ interface useWrapperHeightResponse {
   wrapperHeight: string
 }
 
-const useWrapperHeight = (): useWrapperHeightResponse => {
+const useWrapperHeight = (collapsed?: boolean): useWrapperHeightResponse => {
   const memberRef = useRef<HTMLDivElement>(null)
   const [wrapperHeight, setWrapperHeight] = useState<string>('0px')
 
   useEffect(() => {
-    if (memberRef.current) {
+    if (memberRef.current && !collapsed) {
       setWrapperHeight(`${memberRef.current.offsetHeight}px`)
     }
-  }, [memberRef])
+  }, [memberRef, collapsed])
 
   return {memberRef, wrapperHeight}
 }
