@@ -1,6 +1,7 @@
-import {Box, Text, Tooltip} from '@sanity/ui'
+import {Box, Text, Tooltip, useTheme} from '@sanity/ui'
 import {InternalLocale} from '../../types/Locale'
 import ErrorWarningIcons from '../shared/ErrorWarningIcons'
+import {EditIcon} from '@sanity/icons'
 
 interface DropdownMenuItemProps {
   name: string
@@ -8,6 +9,7 @@ interface DropdownMenuItemProps {
 }
 
 const DropdownMenuItem = ({name = 'title', locale}: DropdownMenuItemProps) => {
+  const sanityTheme = useTheme()
   return (
     <>
       <Tooltip
@@ -30,6 +32,9 @@ const DropdownMenuItem = ({name = 'title', locale}: DropdownMenuItemProps) => {
         >
           <ErrorWarningIcons locale={locale} />
           <span className="-label">{locale.label}</span>
+          {locale.isChanged && (
+            <EditIcon fontSize={12} color={sanityTheme.sanity.color.solid.caution.hovered.bg} />
+          )}
         </label>
       </Tooltip>
     </>

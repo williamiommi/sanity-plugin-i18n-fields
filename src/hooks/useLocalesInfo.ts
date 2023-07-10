@@ -5,6 +5,7 @@ import useUserInfo from './useUserInfo'
 import mergeLocaleConfiguration from '../lib/mergeLocaleConfiguration'
 import validateLocaleRestrictions from '../lib/validateLocaleRestrictions'
 import checkFieldError from '../lib/checkFieldError'
+import checkFieldChanged from '../lib/checkFieldChanged'
 
 interface useLocalesInfoProps {
   locales: Locale[] // locales coming from plugin configuration
@@ -51,6 +52,8 @@ const useLocalesInfo = ({
           if (hasGlobalError) return locale
           return checkFieldError(locale, members)
         })
+        // check for field changed
+        .map((locale) => checkFieldChanged(locale, members))
         // put at first position the default locale or the [0] if no default is present
         .sort((a, b) => Number(!!b.default) - Number(!!a.default)),
     [

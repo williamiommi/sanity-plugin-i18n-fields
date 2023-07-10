@@ -16,6 +16,7 @@
 
 .i18n--slider-language {
   display: flex;
+  gap: 5px;
   margin: 5px 0 10px 0;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -54,7 +55,7 @@
     }
 
     &[data-ui='border'] {
-      border-bottom: 3px solid transparent;
+      border-bottom: 2px solid transparent;
       border-bottom-color: transparent;
       &[data-selected='true'] {
         border-bottom-color: var(--i18n-bg-selected);
