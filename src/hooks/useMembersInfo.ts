@@ -19,7 +19,7 @@ const useMembersInfo = ({
     const currentLocale = availableLocales.find((locale) => locale.code === member.name)
     if (currentLocale) {
       // setting field level readOnly from configuration
-      member.field.readOnly = currentLocale.isReadOnly
+      member.field.readOnly = member.field.readOnly || currentLocale.isReadOnly
       // setting field options
       member.field.schemaType.options = currentLocale.options
       // if error is global, force to have the input in error

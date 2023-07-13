@@ -43,7 +43,14 @@ const useLocalesInfo = ({
         .map((locale) => mergeLocaleConfiguration(locale, fieldLocales, fieldHidden, fieldReadOnly))
         // validate restrictions by visibleFor, editableFor, readOnly and hidden attributes
         .map((locale) =>
-          validateLocaleRestrictions(userRoles, locale, currentUser, fieldValue, document)
+          validateLocaleRestrictions({
+            userRoles,
+            locale,
+            currentUser,
+            fieldValue,
+            document,
+            members,
+          })
         )
         // remove all possible hidden locales after restrictions
         .filter((locale) => !locale.isHidden)
