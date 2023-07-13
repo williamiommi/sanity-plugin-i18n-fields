@@ -16,9 +16,7 @@ const DropdownButton = ({activeLocale}: DropdownButtonProps) => {
         content={
           <Box padding={2}>
             <Text muted size={0}>
-              {`${activeLocale.title || activeLocale.code}${
-                activeLocale.isReadOnly ? ' - READONLY' : ''
-              }`}
+              {activeLocale.title || activeLocale.code}
             </Text>
           </Box>
         }

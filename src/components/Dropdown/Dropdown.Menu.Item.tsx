@@ -16,7 +16,7 @@ const DropdownMenuItem = ({name = 'title', locale}: DropdownMenuItemProps) => {
         content={
           <Box padding={2}>
             <Text muted size={0}>
-              {`${locale.title || locale.code}${locale.isReadOnly ? ' - READONLY' : ''}`}
+              {locale.title || locale.code}
             </Text>
           </Box>
         }
