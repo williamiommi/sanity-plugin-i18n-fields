@@ -8,7 +8,6 @@ import SliderWrapper from './Slider/Slider.Wrapper'
 import {Stack} from '@sanity/ui'
 import DropdownWrapper from './Dropdown/Dropdown.Wrapper'
 import useMembersInfo from '../hooks/useMembersInfo'
-import useWrapperHeight from '../hooks/useWrapperHeight'
 
 const I18nDefaultField = (
   props: ObjectFieldProps,
@@ -39,9 +38,13 @@ const I18nDefaultField = (
   // merge global and field ui options
   const pluginUI = useUiInfo(pluginConfig.ui, fieldOptions.ui)
   // get object members with all necessary info
-  const parsedMembers = useMembersInfo({members, availableLocales, hasGlobalError, fieldType})
-  // get wrapper height to avoid issue with absolute position
-  const {memberRef, wrapperHeight} = useWrapperHeight(collapsed)
+  const parsedMembers = useMembersInfo({
+    members,
+    availableLocales,
+    hasGlobalError,
+    fieldType,
+    fieldOptions,
+  })
 
   const DefaultRender = () => (
     <>{renderDefault({...props, validation: mergedValidation, children: null})}</>
@@ -71,17 +74,14 @@ const I18nDefaultField = (
           activeLocale={activeLocale}
         />
       )}
-      <div style={{position: 'relative', height: wrapperHeight}}>
+      <div className="i18n--field-member-container">
         {parsedMembers.map((member) => {
           return (
             <div
               key={member.name}
-              ref={memberRef}
-              style={{
-                position: 'absolute',
-                width: '100%',
-                opacity: `${activeLocale.code === member.name ? '1' : '0'}`,
-              }}
+              className={`i18n--field-member ${
+                activeLocale.code === member.name ? '' : '--hidden'
+              }`}
             >
               <MemberField
                 member={{

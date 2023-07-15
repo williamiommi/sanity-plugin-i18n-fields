@@ -6,6 +6,7 @@ interface useMembersInfoProps {
   members: ObjectMember[]
   availableLocales: InternalLocale[]
   hasGlobalError: boolean
+  fieldOptions: any
   fieldType?: 'string' | 'text'
 }
 
@@ -13,6 +14,7 @@ const useMembersInfo = ({
   members,
   availableLocales,
   hasGlobalError,
+  fieldOptions,
   fieldType = 'string',
 }: useMembersInfoProps): FieldMember[] => {
   return (members as FieldMember[]).map((member) => {
@@ -24,9 +26,9 @@ const useMembersInfo = ({
       member.field.schemaType.options = currentLocale.options
       // if error is global, force to have the input in error
       if (hasGlobalError) member.field.validation = [EMPTY_FORM_NODE_VALIDATION]
-      if (fieldType === 'text' && currentLocale.options?.rows) {
+      if (fieldType === 'text') {
         const schemaType = member.field.schemaType as TextSchemaType
-        schemaType.rows = currentLocale.options.rows
+        schemaType.rows = currentLocale.options?.rows || fieldOptions?.rows
       }
     }
     return member
