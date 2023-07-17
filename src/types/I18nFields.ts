@@ -1,4 +1,6 @@
-import {I18nStringLocale, I18nTextLocale, Locale} from './Locale'
+import {I18nNumberLocale, I18nStringLocale, I18nTextLocale, Locale} from './Locale'
+
+export type I18nFieldType = 'string' | 'text' | 'number'
 
 export interface I18nFieldsConfigUI {
   type?: 'slider' | 'dropdown'
@@ -8,6 +10,11 @@ export interface I18nFieldsConfigUI {
 
 export interface I18nStringOptions {
   locales?: I18nStringLocale[]
+  ui?: I18nFieldsConfigUI
+}
+
+export interface I18nNumberOptions {
+  locales?: I18nNumberLocale[]
   ui?: I18nFieldsConfigUI
 }
 

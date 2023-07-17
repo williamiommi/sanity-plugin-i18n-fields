@@ -1,5 +1,5 @@
 import {MemberField, ObjectFieldProps} from 'sanity'
-import {I18nFieldsConfig} from '../types/I18nFields'
+import {I18nFieldType, I18nFieldsConfig} from '../types/I18nFields'
 import useSetupCssVars from '../hooks/useSetupCssVars'
 import useValidationInfo from '../hooks/useValidationInfo'
 import useLocalesInfo from '../hooks/useLocalesInfo'
@@ -12,7 +12,7 @@ import useMembersInfo from '../hooks/useMembersInfo'
 const I18nDefaultField = (
   props: ObjectFieldProps,
   pluginConfig: I18nFieldsConfig,
-  fieldType: 'string' | 'text'
+  fieldType: I18nFieldType
 ) => {
   const {
     name: currentPath,

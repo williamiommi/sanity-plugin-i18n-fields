@@ -1,5 +1,5 @@
 import {ObjectDefinition, ObjectOptions} from 'sanity'
-import {I18nStringOptions, I18nTextOptions} from './I18nFields'
+import {I18nNumberOptions, I18nStringOptions, I18nTextOptions} from './I18nFields'
 
 export type I18nStringDefinition = Omit<
   ObjectDefinition,
@@ -7,6 +7,14 @@ export type I18nStringDefinition = Omit<
 > & {
   type: 'i18n.string'
   options?: I18nStringOptions & Omit<ObjectOptions, 'columns'>
+}
+
+export type I18nNumberDefinition = Omit<
+  ObjectDefinition,
+  'type' | 'fields' | 'components' | 'options'
+> & {
+  type: 'i18n.number'
+  options?: I18nNumberOptions & Omit<ObjectOptions, 'columns'>
 }
 
 export type I18nTextDefinition = Omit<
@@ -23,6 +31,9 @@ declare module 'sanity' {
   // it is important that the key is the same as the type in the definition ('magically-added-type')
   export interface IntrinsicDefinitions {
     'i18n.string': I18nStringDefinition
+  }
+  export interface IntrinsicDefinitions {
+    'i18n.number': I18nNumberDefinition
   }
   export interface IntrinsicDefinitions {
     'i18n.text': I18nTextDefinition

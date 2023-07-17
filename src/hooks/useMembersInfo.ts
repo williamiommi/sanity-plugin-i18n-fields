@@ -1,13 +1,14 @@
 import {FieldMember, ObjectMember, TextSchemaType} from 'sanity'
 import {InternalLocale} from '../types/Locale'
 import {EMPTY_FORM_NODE_VALIDATION} from '../lib/conts'
+import {I18nFieldType} from '../types/I18nFields'
 
 interface useMembersInfoProps {
   members: ObjectMember[]
   availableLocales: InternalLocale[]
   hasGlobalError: boolean
   fieldOptions: any
-  fieldType?: 'string' | 'text'
+  fieldType?: I18nFieldType
 }
 
 const useMembersInfo = ({

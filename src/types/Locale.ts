@@ -21,16 +21,15 @@ export interface InternalLocale extends Locale {
   options?: any
 }
 
-export interface I18nStringLocale
+interface FilteredInternalLocale
   extends Omit<
     InternalLocale,
     'label' | 'title' | 'default' | 'hasError' | 'isReadOnly' | 'isHidden'
   > {}
 
-export interface I18nTextLocale
-  extends Omit<
-    InternalLocale,
-    'label' | 'title' | 'default' | 'hasError' | 'isReadOnly' | 'isHidden'
-  > {
+export interface I18nStringLocale extends FilteredInternalLocale {}
+
+export interface I18nNumberLocale extends FilteredInternalLocale {}
+export interface I18nTextLocale extends FilteredInternalLocale {
   options?: {rows?: number}
 }
