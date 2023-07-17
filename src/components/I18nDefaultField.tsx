@@ -26,7 +26,7 @@ const I18nDefaultField = (
   useSetupCssVars()
   // get all validation errors, object errors and single field error
   const {hasGlobalError, mergedValidation} = useValidationInfo(validation, members)
-  const {availableLocales, activeLocale} = useLocalesInfo({
+  const {availableLocales, activeLocale, setCurrentLocaleCode} = useLocalesInfo({
     locales: pluginConfig.locales,
     members,
     hasGlobalError,
@@ -63,6 +63,7 @@ const I18nDefaultField = (
             name={currentPath}
             locales={availableLocales}
             activeLocale={activeLocale}
+            onClick={setCurrentLocaleCode}
           />
         )}
       </div>
@@ -72,6 +73,7 @@ const I18nDefaultField = (
           pluginUi={pluginUI}
           locales={availableLocales}
           activeLocale={activeLocale}
+          onClick={setCurrentLocaleCode}
         />
       )}
       <div className="i18n--field-member-container">

@@ -2,14 +2,19 @@ import {Box, Text, Tooltip, useTheme} from '@sanity/ui'
 import {InternalLocale} from '../../types/Locale'
 import ErrorWarningIcons from '../shared/ErrorWarningIcons'
 import {EditIcon} from '@sanity/icons'
+import {Dispatch, SetStateAction, useCallback} from 'react'
 
 interface DropdownMenuItemProps {
   name: string
   locale: InternalLocale
+  onClick: Dispatch<SetStateAction<string>>
 }
 
-const DropdownMenuItem = ({name = 'title', locale}: DropdownMenuItemProps) => {
+const DropdownMenuItem = ({name = 'title', locale, onClick}: DropdownMenuItemProps) => {
   const sanityTheme = useTheme()
+  const onClickHandler = useCallback(() => {
+    onClick(locale.code)
+  }, [locale, onClick])
   return (
     <>
       <Tooltip
@@ -29,6 +34,7 @@ const DropdownMenuItem = ({name = 'title', locale}: DropdownMenuItemProps) => {
           className="i18n--dropdown-menu-item"
           data-read-only={locale.isReadOnly}
           data-code={locale.code}
+          onClick={onClickHandler}
         >
           <ErrorWarningIcons locale={locale} />
           <span className="-label">{locale.label}</span>

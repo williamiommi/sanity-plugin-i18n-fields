@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react'
+import {Dispatch, SetStateAction, useEffect, useRef, useState} from 'react'
 import 'keen-slider/keen-slider.min.css'
 import {useKeenSlider} from 'keen-slider/react'
 import {I18nFieldsConfigUI} from '../../types/I18nFields'
@@ -10,8 +10,9 @@ interface SliderWrapperProps {
   pluginUi: I18nFieldsConfigUI
   locales: InternalLocale[]
   activeLocale: InternalLocale
+  onClick: Dispatch<SetStateAction<string>>
 }
-const SliderWrapper = ({name, pluginUi, locales, activeLocale}: SliderWrapperProps) => {
+const SliderWrapper = ({name, pluginUi, locales, activeLocale, onClick}: SliderWrapperProps) => {
   const [ready, setReady] = useState(false)
   const sliderRef = useRef(null)
   const [keenRef, keenSlider] = useKeenSlider(
@@ -46,6 +47,7 @@ const SliderWrapper = ({name, pluginUi, locales, activeLocale}: SliderWrapperPro
           isSelected={activeLocale?.code === locale.code}
           locale={locale}
           pluginUi={pluginUi}
+          onClick={onClick}
         />
       ))}
     </div>

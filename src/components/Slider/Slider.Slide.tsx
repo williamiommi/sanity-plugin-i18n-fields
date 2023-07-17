@@ -3,6 +3,7 @@ import {InternalLocale} from '../../types/Locale'
 import {I18nFieldsConfigUI} from '../../types/I18nFields'
 import ErrorWarningIcons from '../shared/ErrorWarningIcons'
 import {EditIcon} from '@sanity/icons'
+import {Dispatch, SetStateAction, useCallback} from 'react'
 
 interface SlideProps {
   name: string | undefined
@@ -10,9 +11,13 @@ interface SlideProps {
   index: number
   isSelected: boolean
   pluginUi: I18nFieldsConfigUI
+  onClick: Dispatch<SetStateAction<string>>
 }
-const Slide = ({name, locale, index, isSelected, pluginUi}: SlideProps) => {
+const Slide = ({name, locale, index, isSelected, pluginUi, onClick}: SlideProps) => {
   const sanityTheme = useTheme()
+  const onClickHandler = useCallback(() => {
+    onClick(locale.code)
+  }, [locale, onClick])
   return (
     <Tooltip
       key={locale.code}
@@ -37,6 +42,7 @@ const Slide = ({name, locale, index, isSelected, pluginUi}: SlideProps) => {
         data-read-only={locale.isReadOnly}
         data-code={locale.code}
         data-index={index}
+        onClick={onClickHandler}
       >
         <ErrorWarningIcons locale={locale} />
         <span className="-label">{locale.label}</span>
