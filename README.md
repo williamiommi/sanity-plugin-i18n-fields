@@ -1,6 +1,8 @@
-# sanity-plugin-i18n-fields
+# 🌍 i18n fields
 
-> This is a **Sanity Studio v3** plugin.
+An alternative way to manage localization at field level in your Sanity Studio.
+
+[License](#license)
 
 ## Installation
 
@@ -8,6 +10,224 @@
 npm install sanity-plugin-i18n-fields
 ```
 
+## Usage
+
+Add it as a plugin in `sanity.config.ts` (or .js):
+
+```ts
+import {defineConfig} from 'sanity'
+import {myPlugin} from 'sanity-plugin-i18n-fields'
+
+export default defineConfig({
+  //...
+  plugins: [myPlugin({})],
+})
+```
+
+## Usage
+
+Add it as a plugin in `sanity.config.ts` (or .js):
+
+```ts
+import {defineConfig} from 'sanity'
+import {myPlugin} from 'sanity-plugin-i18n-fields'
+
+export default defineConfig({
+  //...
+  plugins: [myPlugin({})],
+})
+```
+
+## Usage
+
+Add it as a plugin in `sanity.config.ts` (or .js):
+
+```ts
+import {defineConfig} from 'sanity'
+import {myPlugin} from 'sanity-plugin-i18n-fields'
+
+export default defineConfig({
+  //...
+  plugins: [myPlugin({})],
+})
+```
+
+## Usage
+
+Add it as a plugin in `sanity.config.ts` (or .js):
+
+```ts
+import {defineConfig} from 'sanity'
+import {myPlugin} from 'sanity-plugin-i18n-fields'
+
+export default defineConfig({
+  //...
+  plugins: [myPlugin({})],
+})
+```
+
+## Usage
+
+Add it as a plugin in `sanity.config.ts` (or .js):
+
+```ts
+import {defineConfig} from 'sanity'
+import {myPlugin} from 'sanity-plugin-i18n-fields'
+
+export default defineConfig({
+  //...
+  plugins: [myPlugin({})],
+})
+```
+
+## Usage
+
+Add it as a plugin in `sanity.config.ts` (or .js):
+
+```ts
+import {defineConfig} from 'sanity'
+import {myPlugin} from 'sanity-plugin-i18n-fields'
+
+export default defineConfig({
+  //...
+  plugins: [myPlugin({})],
+})
+```
+
+## Usage
+
+Add it as a plugin in `sanity.config.ts` (or .js):
+
+```ts
+import {defineConfig} from 'sanity'
+import {myPlugin} from 'sanity-plugin-i18n-fields'
+
+export default defineConfig({
+  //...
+  plugins: [myPlugin({})],
+})
+```
+
+## Usage
+
+Add it as a plugin in `sanity.config.ts` (or .js):
+
+```ts
+import {defineConfig} from 'sanity'
+import {myPlugin} from 'sanity-plugin-i18n-fields'
+
+export default defineConfig({
+  //...
+  plugins: [myPlugin({})],
+})
+```
+
+## Usage
+
+Add it as a plugin in `sanity.config.ts` (or .js):
+
+```ts
+import {defineConfig} from 'sanity'
+import {myPlugin} from 'sanity-plugin-i18n-fields'
+
+export default defineConfig({
+  //...
+  plugins: [myPlugin({})],
+})
+```
+
+## Usage
+
+Add it as a plugin in `sanity.config.ts` (or .js):
+
+```ts
+import {defineConfig} from 'sanity'
+import {myPlugin} from 'sanity-plugin-i18n-fields'
+
+export default defineConfig({
+  //...
+  plugins: [myPlugin({})],
+})
+```
+
+## Usage
+
+Add it as a plugin in `sanity.config.ts` (or .js):
+
+```ts
+import {defineConfig} from 'sanity'
+import {myPlugin} from 'sanity-plugin-i18n-fields'
+
+export default defineConfig({
+  //...
+  plugins: [myPlugin({})],
+})
+```
+
+## Usage
+
+Add it as a plugin in `sanity.config.ts` (or .js):
+
+```ts
+import {defineConfig} from 'sanity'
+import {myPlugin} from 'sanity-plugin-i18n-fields'
+
+export default defineConfig({
+  //...
+  plugins: [myPlugin({})],
+})
+```
+## Usage
+
+Add it as a plugin in `sanity.config.ts` (or .js):
+
+```ts
+import {defineConfig} from 'sanity'
+import {myPlugin} from 'sanity-plugin-i18n-fields'
+
+export default defineConfig({
+  //...
+  plugins: [myPlugin({})],
+})
+```## Usage
+
+Add it as a plugin in `sanity.config.ts` (or .js):
+
+```ts
+import {defineConfig} from 'sanity'
+import {myPlugin} from 'sanity-plugin-i18n-fields'
+
+export default defineConfig({
+  //...
+  plugins: [myPlugin({})],
+})
+```
+## Usage
+
+Add it as a plugin in `sanity.config.ts` (or .js):
+
+```ts
+import {defineConfig} from 'sanity'
+import {myPlugin} from 'sanity-plugin-i18n-fields'
+
+export default defineConfig({
+  //...
+  plugins: [myPlugin({})],
+})
+```
+## Usage
+
+Add it as a plugin in `sanity.config.ts` (or .js):
+
+```ts
+import {defineConfig} from 'sanity'
+import {myPlugin} from 'sanity-plugin-i18n-fields'
+
+export default defineConfig({
+  //...
+  plugins: [myPlugin({})],
+})
+```
 ## Usage
 
 Add it as a plugin in `sanity.config.ts` (or .js):
