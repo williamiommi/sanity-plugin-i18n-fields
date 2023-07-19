@@ -2,7 +2,7 @@
 
 An alternative way to manage localization at field level in your Sanity Studio.
 
-[License](#license)
+[License](#test)
 
 ## Installation
 
@@ -122,7 +122,7 @@ export default defineConfig({
 })
 ```
 
-## Usage
+## Test
 
 Add it as a plugin in `sanity.config.ts` (or .js):
 
