@@ -1,4 +1,4 @@
-import {Box, Text, Tooltip, useTheme} from '@sanity/ui'
+import {Box, MenuItem, Text, Tooltip, useTheme} from '@sanity/ui'
 import {InternalLocale} from '../../types/Locale'
 import ErrorWarningIcons from '../shared/ErrorWarningIcons'
 import {EditIcon} from '@sanity/icons'
@@ -16,7 +16,7 @@ const DropdownMenuItem = ({name = 'title', locale, onClick}: DropdownMenuItemPro
     onClick(locale.code)
   }, [locale, onClick])
   return (
-    <>
+    <MenuItem padding={0} onClick={onClickHandler}>
       <Tooltip
         content={
           <Box padding={2}>
@@ -34,7 +34,6 @@ const DropdownMenuItem = ({name = 'title', locale, onClick}: DropdownMenuItemPro
           className="i18n--dropdown-menu-item"
           data-read-only={locale.isReadOnly}
           data-code={locale.code}
-          onClick={onClickHandler}
         >
           <ErrorWarningIcons locale={locale} />
           <span className="-label">{locale.label}</span>
@@ -43,7 +42,7 @@ const DropdownMenuItem = ({name = 'title', locale, onClick}: DropdownMenuItemPro
           )}
         </label>
       </Tooltip>
-    </>
+    </MenuItem>
   )
 }
 

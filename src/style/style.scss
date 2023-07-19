@@ -132,14 +132,19 @@
   max-width: 300px;
   max-height: 200px;
   text-align: center;
+
+  button {
+    background: none!important;
+  }
 }
 
 .i18n--dropdown-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   cursor: pointer;
   font-size: 0.875rem;
-  > span {
-    padding: 2px 5px !important;
-  }
+  padding: 4px 7px;
   &:hover {
     background-color: var(--i18n-bg-hover);
     border-radius: 3px;
