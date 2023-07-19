@@ -2,6 +2,8 @@
 
 An alternative way to manage localization at field level in your Sanity Studio.
 
+![I18n String Field](https://raw.githubusercontent.com/cositehq/sanity-plugin-simpler-color-input/7f6177d76e22aa81e9bb83e813d5279e7f327545/assets/allow-custom-value.png)
+
 - [⚡️Features](#features)
 - [🔌 Installation](#installation)
 - [🧑‍💻 Usage](#usage)
@@ -41,9 +43,20 @@ export default defineConfig({
   })],
 })
 ```
+The plugin will provide 3 new types: `i18n.string`, `i18n.text` and `i18n.number`. All 3 types will be objects with a dynamic number of fields based on the localizations provided during configuration.
+<br /><br />
 ## ⚙️ Plugin Configuration
+TODO
+<br /><br />
+
 ## ⚙️ Single Instance Configuration
+TODO
+<br /><br />
+
 ## 🚨 Validation
+TODO
+<br /><br />
+
 ## 🤩 Examples Examples Examples
 
 ## License
