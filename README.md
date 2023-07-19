@@ -7,7 +7,7 @@ An alternative way to manage localization at field level in your Sanity Studio.
 - [🧑‍💻 Usage](#usage)
 - [⚙️ Plugin Configuration](#plugin-configuration)
 - [⚙️ Single Instance Configuration](#single-instance-configuration)
-- [🚨 Validation](#single-instance-configuration)
+- [🚨 Validation](#validation)
 - [🤩 Examples Examples Examples](#examples-examples-examples)
 
 ## ⚡️ Features
@@ -26,19 +26,25 @@ An alternative way to manage localization at field level in your Sanity Studio.
 npm install sanity-plugin-i18n-fields
 ```
 
-## Usage
+## 🧑‍💻 Usage
 
 Add it as a plugin in `sanity.config.ts` (or .js):
 
 ```ts
 import {defineConfig} from 'sanity'
-import {myPlugin} from 'sanity-plugin-i18n-fields'
+import {I18nFields} from 'sanity-plugin-i18n-fields'
 
 export default defineConfig({
   //...
-  plugins: [myPlugin({})],
+  plugins: [I18nFields({
+    // your configuration here
+  })],
 })
 ```
+## ⚙️ Plugin Configuration
+## ⚙️ Single Instance Configuration
+## 🚨 Validation
+## 🤩 Examples Examples Examples
 
 ## License
 
