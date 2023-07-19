@@ -3,14 +3,24 @@
 An alternative way to manage localization at field level in your Sanity Studio.
 
 - [⚡️Features](#features)
-
-[Features](#features)
-
----
+- [🔌 Installation](#installation)
+- [🧑‍💻 Usage](#usage)
+- [⚙️ Plugin Configuration](#plugin-configuration)
+- [⚙️ Single Instance Configuration](#single-instance-configuration)
+- [🚨 Validation](#single-instance-configuration)
+- [🤩 Examples Examples Examples](#examples-examples-examples)
 
 ## ⚡️ Features
 
-## Installation
+- Sanity v3 plugin
+- Field Level Localization for the following Sanity types: `string`, `text` and `number`
+- Optional UI (slider or dropdown)
+- Locale visibility by role
+- Locale readonly by role
+- Object Validation
+- Customization available not only at plugin level but also at instance level.
+
+## 🔌 Installation
 
 ```sh
 npm install sanity-plugin-i18n-fields
