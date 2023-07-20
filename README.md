@@ -10,20 +10,20 @@ An alternative way to manage localization at field level in your Sanity Studio.
 - [🔌 Installation](#-installation)
 - [🧑‍💻 Usage](#-usage)
 - [⚙️ Plugin Configuration](#%EF%B8%8F-plugin-configuration)
-- [⚙️ Single Instance Configuration](#%EF%B8%8F-single-instance-configuration)
+- [🔧 Single Instance Configuration](#%EF%B8%8F-single-instance-configuration)
 - [🚨 Validation](#-validation)
 - [🤩 Examples Examples Examples](#-examples-examples-examples)
 <br />
 
 ## ⚡️ Features
 
-- Sanity v3 plugin
-- Field Level Localization for the following Sanity types: `string`, `text` and `number`
-- Optional UI (slider or dropdown)
-- Locale visibility by user roles
-- Locale readonly by user roles
-- Object Validation
-- Customization available not only at plugin level but also at instance level.
+- Sanity v3 plugin.
+- Field level localization for the following Sanity types: `string`, `text`, and `number`.
+- Optional UI (slider or dropdown).
+- Locale visibility by user roles.
+- Locale readonly by user roles.
+- Object Validation.
+- Customization available not only at the plugin level but also at field level.
 <br />
 
 ## 🔌 Installation
@@ -98,7 +98,7 @@ export default defineConfig({
 ```
 <br /><br />
 
-## ⚙️ Single Instance Configuration
+## 🔧 Single Instance Configuration
 Other than a global configuration, you can tune your configuration at field level. For example for a specific field you can have a dropdown layout or you can hide a specific locale.
 ```ts
 import {ConditionalProperty, NumberOptions, StringOptions} from 'sanity'
