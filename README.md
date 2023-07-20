@@ -20,8 +20,8 @@ An alternative way to manage localization at field level in your Sanity Studio.
 - Sanity v3 plugin
 - Field Level Localization for the following Sanity types: `string`, `text` and `number`
 - Optional UI (slider or dropdown)
-- Locale visibility by role
-- Locale readonly by role
+- Locale visibility by user roles
+- Locale readonly by user roles
 - Object Validation
 - Customization available not only at plugin level but also at instance level.
 <br />
@@ -96,12 +96,41 @@ export default defineConfig({
   })],
 })
 ```
-
-
 <br /><br />
 
 ## ⚙️ Single Instance Configuration
-TODO
+Other than a global configuration, you can tune your configuration at field level. For example for a specific field you can have a dropdown layout or you can hide a specific locale.
+```ts
+export default defineType({
+  type: 'document',
+  name: 'myDocument',
+  title: 'My Document',
+  fields: [
+    defineField({
+      type: 'i18n.string' | 'i18n.text' | 'i18n.number',
+      // ...
+      options: {
+        ui?: {
+          type?: 'slider' | 'dropdown'
+          position?: 'top' | 'bottom'
+          selected?: 'border' | 'background'
+        },
+        locales: [
+            {
+              code: string // the code of the locale. MUST be the same of the one used in the global configuration
+              readOnly?: ConditionalProperty
+              hidden?: ConditionalProperty
+              options?: StringOptions | { rows?:number } | NumberOptions
+              visibleFor?: string[] // List of roles for which this locale is visible. Using the '!' operator, it is possible to make it not visibile
+              editableFor?: string[] // List of roles for which this locale is editable. Using the '!' operator, it is possible to do the opposite
+            },
+            // other locales
+          ]
+      }
+    })
+  ]
+})
+```
 <br /><br />
 
 ## 🚨 Validation
