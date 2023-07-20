@@ -10,7 +10,7 @@ An alternative way to manage localization at field level in your Sanity Studio.
 - [🔌 Installation](#-installation)
 - [🧑‍💻 Usage](#-usage)
 - [⚙️ Plugin Configuration](#%EF%B8%8F-plugin-configuration)
-- [🔧 Single Instance Configuration](#%EF%B8%8F-single-instance-configuration)
+- [🔧 Single Instance Configuration](#-single-instance-configuration)
 - [🚨 Validation](#-validation)
 - [🤩 Examples Examples Examples](#-examples-examples-examples)
 <br />
