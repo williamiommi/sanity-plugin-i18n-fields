@@ -53,7 +53,51 @@ The plugin will provide 3 new types: `i18n.string`, `i18n.text` and `i18n.number
 <br />
 
 ## ⚙️ Plugin Configuration
-TODO
+This is the main configuration of the plugin. The available options are the following:
+```ts
+{
+  // the ui option it lets you play with the UI of the plugin.
+  ui?: {
+    type?: 'slider' | 'dropdown' // the ui of the plugin. Default is 'slider'
+    position?: 'top' | 'bottom' // the position of the 'slider', above or below the input field. Default is 'top'
+    selected?: 'border' | 'background' // the ui of the selected locale when type is 'slider'. Default is 'border'
+  },
+  // the locales option is the core of the configuration. It lets you configure all the available locales of your project.
+  locales: [
+    {
+      code: string // the code of the locale
+      label: ReactNode // the label of the locale
+      title: string // the title of the locale
+      default?: boolean // the flag to identify the default locale. If true, the locale is in the first position
+      visibleFor?: string[] // List of roles for which this locale is visible. Using the '!' operator, it is possible to make it not visibile
+      editableFor?: string[] // List of roles for which this locale is editable. Using the '!' operator, it is possible to do the opposite
+    },
+    // other locales
+  ]
+}
+```
+Sample configuration:
+```ts
+import {defineConfig} from 'sanity'
+import {I18nFields} from 'sanity-plugin-i18n-fields'
+
+export default defineConfig({
+  //...
+  plugins: [I18nFields({
+    ui: {
+      position: 'bottom'
+    },
+    locales: [
+      {code: 'en', label: '🇬🇧', title: 'English', default: true},
+      {code: 'en_us', label: '🇺🇸🇬🇧', title: 'American English'},
+      {code: 'it', label: '🇮🇹', title: 'Italian', visibleFor: ['it_editor']}, // country visible only for administrator and it_editor roles
+      {code: 'es', label: '🇪🇸', title: 'Spanish'},
+    ]
+  })],
+})
+```
+
+
 <br /><br />
 
 ## ⚙️ Single Instance Configuration
