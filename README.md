@@ -6,13 +6,13 @@ An alternative way to manage localization at field level in your Sanity Studio.
   <img src="images/hero.jpg" alt="I18n String Field Sample"/>
 </p>
 
-- [⚡️Features](#features)
-- [🔌 Installation](#installation)
-- [🧑‍💻 Usage](#usage)
-- [⚙️ Plugin Configuration](#plugin-configuration)
-- [⚙️ Single Instance Configuration](#single-instance-configuration)
-- [🚨 Validation](#validation)
-- [🤩 Examples Examples Examples](#examples-examples-examples)
+- [⚡️Features](#%EF%B8%8F-features)
+- [🔌 Installation](#-installation)
+- [🧑‍💻 Usage](#-usage)
+- [⚙️ Plugin Configuration](#%EF%B8%8F-plugin-configuration)
+- [⚙️ Single Instance Configuration](#%EF%B8%8F-single-instance-configuration)
+- [🚨 Validation](#-validation)
+- [🤩 Examples Examples Examples](#-examples-examples-examples)
 <br />
 
 ## ⚡️ Features
