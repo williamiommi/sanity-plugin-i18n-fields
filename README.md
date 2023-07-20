@@ -139,6 +139,9 @@ export default defineType({
 Since the new types introduced by the plugin are objects, you can use [children validation](https://www.sanity.io/docs/validation#9e69d5db6f72) to address specific validation on a specific locale.
 All error/warning messages are then collected and visible near the title of your field.
 
+<p align="center">
+  <img src="images/hero-validation.jpg" alt="Validation Sample"/>
+</p>
 
 <br /><br />
 
