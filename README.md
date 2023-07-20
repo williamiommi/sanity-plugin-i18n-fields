@@ -101,6 +101,8 @@ export default defineConfig({
 ## ⚙️ Single Instance Configuration
 Other than a global configuration, you can tune your configuration at field level. For example for a specific field you can have a dropdown layout or you can hide a specific locale.
 ```ts
+import {ConditionalProperty, NumberOptions, StringOptions} from 'sanity'
+
 export default defineType({
   type: 'document',
   name: 'myDocument',
@@ -115,7 +117,7 @@ export default defineType({
           position?: 'top' | 'bottom'
           selected?: 'border' | 'background'
         },
-        locales: [
+        locales?: [
             {
               code: string // the code of the locale. MUST be the same of the one used in the global configuration
               readOnly?: ConditionalProperty
