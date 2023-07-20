@@ -136,7 +136,10 @@ export default defineType({
 <br /><br />
 
 ## 🚨 Validation
-TODO
+Since the new types introduced by the plugin are objects, you can use [children validation](https://www.sanity.io/docs/validation#9e69d5db6f72) to address specific validation on a specific locale.
+All error/warning messages are then collected and visible near the title of your field.
+
+
 <br /><br />
 
 ## 🤩 Examples Examples Examples
