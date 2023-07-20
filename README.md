@@ -142,6 +142,9 @@ All error/warning messages are then collected and visible near the title of your
 <p align="center">
   <img src="images/hero-validation.jpg" alt="Validation Sample"/>
 </p>
+<p align="center">
+  <img src="images/hero-validation2.jpg" alt="Validation Sample"/>
+</p>
 
 <br /><br />
 
