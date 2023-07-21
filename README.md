@@ -148,13 +148,24 @@ All error/warning messages are then collected and visible near the title of your
 
 ## 🤩 Examples Examples Examples
 
-- String Field
+- [String Field](#string-field)
 - Text Field
 - Number Field
 - Slider top position
 - Slider w/ background option
 - Dropdown UI
 - Multiple UI on different fields
+
+### String Field
+```ts
+  defineField({
+    type: 'i18n.string',
+    name: 'title',
+    title: 'Title',
+    description: 'Title description',
+  })
+```
+
 <br />
 
 ## License
