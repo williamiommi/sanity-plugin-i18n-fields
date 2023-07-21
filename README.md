@@ -165,7 +165,37 @@ All error/warning messages are then collected and visible near the title of your
     description: 'Title description',
   })
 ```
+<p align="center">
+  <img src="images/examples/string-field.jpg" alt="Example: String Field" />
+</p>
+<br />
 
+### Text Field
+```ts
+  defineField({
+    type: 'i18n.text',
+    name: 'title',
+    title: 'Title',
+    description: 'Title description',
+  })
+```
+<p align="center">
+  <img src="images/examples/text-field.jpg" alt="Example: Text Field" />
+</p>
+<br />
+
+### Number Field
+```ts
+  defineField({
+    type: 'i18n.number',
+    name: 'title',
+    title: 'Title',
+    description: 'Title description',
+  })
+```
+<p align="center">
+  <img src="images/examples/number-field.jpg" alt="Example: Number Field" />
+</p>
 <br />
 
 ## License
