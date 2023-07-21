@@ -50,7 +50,6 @@ export default defineConfig({
 ```
 The plugin will provide 3 new types: `i18n.string`, `i18n.text` and `i18n.number`. All 3 types will be objects with a dynamic number of fields based on the localizations provided during configuration.\
 <br />
-<br />
 
 ## ⚙️ Plugin Configuration
 This is the main configuration of the plugin. The available options are the following:
@@ -96,7 +95,7 @@ export default defineConfig({
   })],
 })
 ```
-<br /><br />
+<br />
 
 ## 🔧 Single Instance Configuration
 Other than a global configuration, you can tune your configuration at field level. For example for a specific field you can have a dropdown layout or you can hide a specific locale.
@@ -133,7 +132,7 @@ export default defineType({
   ]
 })
 ```
-<br /><br />
+<br />
 
 ## 🚨 Validation
 Since the new types introduced by the plugin are objects, you can use [children validation](https://www.sanity.io/docs/validation#9e69d5db6f72) to address specific validation on a specific locale.
@@ -145,10 +144,18 @@ All error/warning messages are then collected and visible near the title of your
 <p align="center">
   <img src="images/hero-validation2.jpg" alt="Validation Sample"/>
 </p>
-
-<br /><br />
+<br />
 
 ## 🤩 Examples Examples Examples
+
+- String Field
+- Text Field
+- Number Field
+- Slider top position
+- Slider w/ background option
+- Dropdown UI
+- Multiple UI on different fields
+<br />
 
 ## License
 
