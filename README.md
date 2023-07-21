@@ -156,7 +156,7 @@ All error/warning messages are then collected and visible near the title of your
 - Dropdown UI
 - Multiple UI on different fields
 
-### String Field
+### Example: String Field
 ```ts
   defineField({
     type: 'i18n.string',
@@ -170,7 +170,7 @@ All error/warning messages are then collected and visible near the title of your
 </p>
 <br />
 
-### Text Field
+### Example: Text Field
 ```ts
   defineField({
     type: 'i18n.text',
@@ -184,7 +184,7 @@ All error/warning messages are then collected and visible near the title of your
 </p>
 <br />
 
-### Number Field
+### Example: Number Field
 ```ts
   defineField({
     type: 'i18n.number',
