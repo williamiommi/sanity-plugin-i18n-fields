@@ -153,8 +153,8 @@ All error/warning messages are then collected and visible near the title of your
 - [String Field](#example-string-field)
 - [Text Field](#example-text-field)
 - [Number Field](#example-number-field)
-- Slider top position
-- Slider w/ background option
+- [Slider top position](#example-slider-top-position)
+- [Slider with background option](#example-slider-with-background-option)
 - Dropdown UI
 - Multiple UI on different fields
 
@@ -225,6 +225,66 @@ All error/warning messages are then collected and visible near the title of your
 ```
 <p align="center">
   <img src="images/examples/number-field.jpg" alt="Example: Number Field" />
+</p>
+<br />
+
+### Example: Slider top position
+```ts
+  I18nFields({
+    ui: {
+      position: 'top'
+    },
+    locales: [
+      {code: 'en', label: '🇬🇧', title: 'English', default: true},
+      {code: 'en_us', label: '🇺🇸🇬🇧', title: 'American English'},
+      {code: 'it', label: '🇮🇹', title: 'Italian'},
+      {code: 'es', label: '🇪🇸', title: 'Spanish'},
+    ]
+  })],
+})
+```
+<p align="center">
+  <img src="images/examples/position-top.jpg" alt="Example: Slider top position" />
+</p>
+<br />
+
+### Example: Slider with background UI option
+```ts
+  I18nFields({
+    ui: {
+      selected: 'background'
+    },
+    locales: [
+      {code: 'en', label: '🇬🇧', title: 'English', default: true},
+      {code: 'en_us', label: '🇺🇸🇬🇧', title: 'American English'},
+      {code: 'it', label: '🇮🇹', title: 'Italian'},
+      {code: 'es', label: '🇪🇸', title: 'Spanish'},
+    ]
+  })],
+})
+```
+<p align="center">
+  <img src="images/examples/selected-background.jpg" alt="Example: Slider with background UI option" />
+</p>
+<br />
+
+### Example: Dropdown UI
+```ts
+  I18nFields({
+    ui: {
+      type: 'dropdown'
+    },
+    locales: [
+      {code: 'en', label: '🇬🇧', title: 'English', default: true},
+      {code: 'en_us', label: '🇺🇸🇬🇧', title: 'American English'},
+      {code: 'it', label: '🇮🇹', title: 'Italian'},
+      {code: 'es', label: '🇪🇸', title: 'Spanish'},
+    ]
+  })],
+})
+```
+<p align="center">
+  <img src="images/examples/dropdown-ui.jpg" alt="Example: Slider with background UI option" />
 </p>
 <br />
 
