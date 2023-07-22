@@ -31,6 +31,6 @@ export interface I18nFieldsConfig {
 
 export const defaultI18nFieldsConfigUI: I18nFieldsConfigUI = {
   type: 'slider',
-  position: 'top',
+  position: 'bottom',
   selected: 'border',
 }
