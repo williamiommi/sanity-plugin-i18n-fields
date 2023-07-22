@@ -154,7 +154,7 @@ All error/warning messages are then collected and visible near the title of your
 - [Text Field](#example-text-field)
 - [Number Field](#example-number-field)
 - [Slider top position](#example-slider-top-position)
-- [Slider with background option](#example-slider-with-background-option)
+- [Slider with background option](#example-slider-with-background-ui-option)
 - [Dropdown UI](#example-dropdown-ui)
 - Multiple UI on different fields
 
