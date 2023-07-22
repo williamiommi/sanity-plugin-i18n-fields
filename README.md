@@ -3,7 +3,7 @@
 An alternative way to manage localization at field level in your Sanity Studio.
 
 <p align="center">
-  <img src="images/hero.jpg" alt="I18n String Field Sample"/>
+  <img width="60%" width="60%" width="60%" src="images/hero.jpg" alt="I18n String Field Sample"/>
 </p>
 
 - [⚡️ Features](#%EF%B8%8F-features)
@@ -139,10 +139,10 @@ Since the new types introduced by the plugin are objects, you can use [children 
 All error/warning messages are then collected and visible near the title of your field or in the right menu.
 
 <p align="center">
-  <img src="images/hero-validation.jpg" alt="Validation Sample"/>
+  <img width="60%" width="60%" width="60%" src="images/hero-validation.jpg" alt="Validation Sample"/>
 </p>
 <p align="center">
-  <img src="images/hero-validation2.jpg" alt="Validation Sample"/>
+  <img width="60%" width="60%" width="60%" src="images/hero-validation2.jpg" alt="Validation Sample"/>
 </p>
 <br />
 
@@ -196,7 +196,7 @@ All error/warning messages are then collected and visible near the title of your
   })
 ```
 <p align="center">
-  <img src="images/examples/string-field.jpg" alt="Example: String Field" />
+  <img width="60%" width="60%" width="60%" src="images/examples/string-field.jpg" alt="Example: String Field" />
 </p>
 <br />
 
@@ -210,7 +210,7 @@ All error/warning messages are then collected and visible near the title of your
   })
 ```
 <p align="center">
-  <img src="images/examples/text-field.jpg" alt="Example: Text Field" />
+  <img width="60%" width="60%" width="60%" src="images/examples/text-field.jpg" alt="Example: Text Field" />
 </p>
 <br />
 
@@ -224,7 +224,7 @@ All error/warning messages are then collected and visible near the title of your
   })
 ```
 <p align="center">
-  <img src="images/examples/number-field.jpg" alt="Example: Number Field" />
+  <img width="60%" width="60%" width="60%" src="images/examples/number-field.jpg" alt="Example: Number Field" />
 </p>
 <br />
 
@@ -244,7 +244,7 @@ All error/warning messages are then collected and visible near the title of your
 })
 ```
 <p align="center">
-  <img src="images/examples/position-top.jpg" alt="Example: Slider top position" />
+  <img width="60%" width="60%" width="60%" src="images/examples/position-top.jpg" alt="Example: Slider top position" />
 </p>
 <br />
 
@@ -264,7 +264,7 @@ All error/warning messages are then collected and visible near the title of your
 })
 ```
 <p align="center">
-  <img src="images/examples/selected-background.jpg" alt="Example: Slider with background UI option" />
+  <img width="60%" width="60%" width="60%" src="images/examples/selected-background.jpg" alt="Example: Slider with background UI option" />
 </p>
 <br />
 
@@ -284,7 +284,7 @@ All error/warning messages are then collected and visible near the title of your
 })
 ```
 <p align="center">
-  <img src="images/examples/dropdown-ui.jpg" alt="Example: Slider with background UI option" />
+  <img width="60%" width="60%" width="60%" src="images/examples/dropdown-ui.jpg" alt="Example: Slider with background UI option" />
 </p>
 <br />
 
