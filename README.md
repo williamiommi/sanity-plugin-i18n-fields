@@ -155,7 +155,7 @@ All error/warning messages are then collected and visible near the title of your
 - [Number Field](#example-number-field)
 - [Slider top position](#example-slider-top-position)
 - [Slider with background option](#example-slider-with-background-option)
-- Dropdown UI
+- [Dropdown UI](#example-dropdown-ui)
 - Multiple UI on different fields
 
 ### Example: Basic Configuration
@@ -170,7 +170,8 @@ All error/warning messages are then collected and visible near the title of your
   })],
 })
 ```
-<br />
+
+---
 
 ### Example: Global User Roles Visibility
 ```ts
@@ -184,7 +185,8 @@ All error/warning messages are then collected and visible near the title of your
   })],
 })
 ```
-<br />
+
+---
 
 ### Example: String Field
 ```ts
@@ -198,7 +200,8 @@ All error/warning messages are then collected and visible near the title of your
 <p align="center">
   <img width="80%" src="images/examples/string-field.jpg" alt="Example: String Field" />
 </p>
-<br />
+
+---
 
 ### Example: Text Field
 ```ts
@@ -212,7 +215,8 @@ All error/warning messages are then collected and visible near the title of your
 <p align="center">
   <img width="80%" src="images/examples/text-field.jpg" alt="Example: Text Field" />
 </p>
-<br />
+
+---
 
 ### Example: Number Field
 ```ts
@@ -226,7 +230,8 @@ All error/warning messages are then collected and visible near the title of your
 <p align="center">
   <img width="80%" src="images/examples/number-field.jpg" alt="Example: Number Field" />
 </p>
-<br />
+
+---
 
 ### Example: Slider top position
 ```ts
@@ -246,7 +251,8 @@ All error/warning messages are then collected and visible near the title of your
 <p align="center">
   <img width="80%" src="images/examples/position-top.jpg" alt="Example: Slider top position" />
 </p>
-<br />
+
+---
 
 ### Example: Slider with background UI option
 ```ts
@@ -266,7 +272,8 @@ All error/warning messages are then collected and visible near the title of your
 <p align="center">
   <img width="80%" src="images/examples/selected-background.jpg" alt="Example: Slider with background UI option" />
 </p>
-<br />
+
+---
 
 ### Example: Dropdown UI
 ```ts
