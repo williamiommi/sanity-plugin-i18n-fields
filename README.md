@@ -58,7 +58,7 @@ This is the main configuration of the plugin. The available options are the foll
   // the ui option it lets you play with the UI of the plugin.
   ui?: {
     type?: 'slider' | 'dropdown' // the ui of the plugin. Default is 'slider'
-    position?: 'top' | 'bottom' // the position of the 'slider', above or below the input field. Default is 'top'
+    position?: 'top' | 'bottom' // the position of the 'slider', above or below the input field. Default is 'bottom'
     selected?: 'border' | 'background' // the ui of the selected locale when type is 'slider'. Default is 'border'
   },
   // the locales option is the core of the configuration. It lets you configure all the available locales of your project.
@@ -148,13 +148,43 @@ All error/warning messages are then collected and visible near the title of your
 
 ## 🤩 Examples Examples Examples
 
-- [String Field](#string-field)
-- Text Field
-- Number Field
+- [Basic Configuration](#example-basic-configuration)
+- [Global User Roles Visibility](#example-global-user-roles-visibility)
+- [String Field](#example-string-field)
+- [Text Field](#example-text-field)
+- [Number Field](#example-number-field)
 - Slider top position
 - Slider w/ background option
 - Dropdown UI
 - Multiple UI on different fields
+
+### Example: Basic Configuration
+```ts
+  I18nFields({
+    locales: [
+      {code: 'en', label: '🇬🇧', title: 'English', default: true},
+      {code: 'en_us', label: '🇺🇸🇬🇧', title: 'American English'},
+      {code: 'it', label: '🇮🇹', title: 'Italian'},
+      {code: 'es', label: '🇪🇸', title: 'Spanish'},
+    ]
+  })],
+})
+```
+<br />
+
+### Example: Global User Roles Visibility
+```ts
+  I18nFields({
+    locales: [
+      {code: 'en', label: '🇬🇧', title: 'English', default: true},
+      {code: 'en_us', label: '🇺🇸🇬🇧', title: 'American English', visibleFor: ['us_editor']}, // visible only for administrator and us_editor roles
+      {code: 'it', label: '🇮🇹', title: 'Italian', editableFor: ['it_editor']}, // visible for everyone but editable only for administrator and it_editor roles.
+      {code: 'es', label: '🇪🇸', title: 'Spanish', editableFor: ['!movie_editor']}, // visible and editable for everyone. It will be readonly for movie_editor role.
+    ]
+  })],
+})
+```
+<br />
 
 ### Example: String Field
 ```ts
