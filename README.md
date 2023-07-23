@@ -157,6 +157,9 @@ All error/warning messages are then collected and visible near the title of your
 - [Slider with background option](#example-slider-with-background-ui-option)
 - [Dropdown UI](#example-dropdown-ui)
 - [Multiple UI on different fields](#example-multiple-ui-on-different-fields)
+- [Hide specific locale for a single field](#example-hide-specific-locale-for-a-single-field)
+- [Locale not editable for a specific field](#example-locale-not-editable-for-a-specific-field)
+- [Conditionally set a locale visible or not editable](#example-conditionally-set-a-locale-visible-or-not-editable)
 
 ### Example: Basic Configuration
 ```ts
@@ -291,7 +294,7 @@ All error/warning messages are then collected and visible near the title of your
 })
 ```
 <p align="center">
-  <img width="80%" src="images/examples/dropdown-ui.jpg" alt="Example: Slider with background UI option" />
+  <img width="80%" src="images/examples/dropdown-ui.jpg" alt="Example: Dropdown UI" />
 </p>
 
 ---
@@ -333,10 +336,108 @@ export default defineType({
 })
 ```
 <p align="center">
-  <img width="80%" src="images/examples/multiple-ui.jpg" alt="Example: Slider with background UI option" />
+  <img width="80%" src="images/examples/multiple-ui.jpg" alt="Example: Multiple UI on different fields" />
 </p>
 
 ---
+
+### Example: Hide specific locale for a single field
+```ts
+  defineField({
+    type: 'i18n.string',
+    name: 'field1',
+    title: 'Field 1',
+    options: {
+      locales: [{
+        code: 'it',
+        hidden: true
+      }]
+    }
+  }),
+```
+<p align="center">
+  <img width="80%" src="images/examples/hidden-locale-field.jpg" alt="Example: Slider with background UI option" />
+</p>
+
+---
+
+### Example: Locale not editable for a specific field
+```ts
+  defineField({
+    type: 'i18n.string',
+    name: 'field1',
+    title: 'Field 1',
+    options: {
+      locales: [{
+        code: 'it',
+        readOnly: true
+      }]
+    }
+  }),
+```
+<p align="center">
+  <img width="80%" src="images/examples/readonly-locale-ui.jpg" alt="Example: Locale not editable for a specific field" />
+</p>
+
+---
+
+### Example: Conditionally set a locale visible or not editable
+```ts
+  defineField({
+    type: 'i18n.string',
+    name: 'field1',
+    title: 'Field 1',
+    options: {
+      locales: [
+        {
+          code: 'it',
+          hidden: ({value}) => {
+            return value?.en === 'pizza with 🍍' ? true : false
+          },
+        },
+        {
+          code: 'en',
+          readOnly: ({value}) => {
+            return value?.it === 'pizza' ? true : false
+          },
+        },
+      ],
+    },
+  }),
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## License
 
