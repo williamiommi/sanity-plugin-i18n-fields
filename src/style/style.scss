@@ -145,8 +145,10 @@
   cursor: pointer;
   font-size: 0.875rem;
   padding: 4px 7px;
+  color: initial;
   &:hover {
     background-color: var(--i18n-bg-hover);
+    color: initial;
     border-radius: 3px;
   }
 }

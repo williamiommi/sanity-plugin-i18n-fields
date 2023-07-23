@@ -3,6 +3,7 @@ import {InternalLocale} from '../../types/Locale'
 import ErrorWarningIcons from '../shared/ErrorWarningIcons'
 import {EditIcon} from '@sanity/icons'
 import {Dispatch, SetStateAction, useCallback} from 'react'
+import IconLabel from '../shared/IconLabel'
 
 interface DropdownMenuItemProps {
   name: string
@@ -36,7 +37,9 @@ const DropdownMenuItem = ({name = 'title', locale, onClick}: DropdownMenuItemPro
           data-code={locale.code}
         >
           <ErrorWarningIcons locale={locale} />
-          <span className="-label">{locale.label}</span>
+          <span className="-label">
+            <IconLabel Label={locale.label} />
+          </span>
           {locale.isChanged && (
             <EditIcon fontSize={12} color={sanityTheme.sanity.color.solid.caution.hovered.bg} />
           )}

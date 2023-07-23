@@ -4,6 +4,7 @@ import {I18nFieldsConfigUI} from '../../types/I18nFields'
 import ErrorWarningIcons from '../shared/ErrorWarningIcons'
 import {EditIcon} from '@sanity/icons'
 import {Dispatch, SetStateAction, useCallback} from 'react'
+import IconLabel from '../shared/IconLabel'
 
 interface SlideProps {
   name: string | undefined
@@ -45,7 +46,9 @@ const Slide = ({name, locale, index, isSelected, pluginUi, onClick}: SlideProps)
         onClick={onClickHandler}
       >
         <ErrorWarningIcons locale={locale} />
-        <span className="-label">{locale.label}</span>
+        <span className="-label">
+          <IconLabel Label={locale.label} />
+        </span>
         {locale.isChanged && (
           <EditIcon fontSize={12} color={sanityTheme.sanity.color.solid.caution.hovered.bg} />
         )}

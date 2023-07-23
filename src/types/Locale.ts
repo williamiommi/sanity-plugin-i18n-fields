@@ -1,9 +1,9 @@
-import {ReactNode} from 'react'
+import {ReactElement} from 'react'
 import {ConditionalProperty, NumberOptions, StringOptions} from 'sanity'
 
 export interface Locale {
   code: string
-  label: ReactNode
+  label: string | (() => ReactElement)
   title: string
   default?: boolean
   visibleFor?: string[]

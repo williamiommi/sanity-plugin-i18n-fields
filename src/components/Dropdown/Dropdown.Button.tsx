@@ -3,6 +3,7 @@ import {SelectIcon} from '@sanity/icons'
 import {InternalLocale} from '../../types/Locale'
 import ErrorWarningIcons from '../shared/ErrorWarningIcons'
 import {EditIcon} from '@sanity/icons'
+import IconLabel from '../shared/IconLabel'
 
 interface DropdownButtonProps {
   activeLocale: InternalLocale
@@ -26,7 +27,7 @@ const DropdownButton = ({activeLocale}: DropdownButtonProps) => {
         <div className="-content">
           <ErrorWarningIcons locale={activeLocale} />
           <span className="-label">
-            {activeLocale.label}
+            <IconLabel Label={activeLocale.label} />
             {activeLocale.isChanged && (
               <EditIcon fontSize={12} color={sanityTheme.sanity.color.solid.caution.hovered.bg} />
             )}
