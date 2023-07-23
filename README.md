@@ -160,6 +160,8 @@ All error/warning messages are then collected and visible near the title of your
 - [Hide specific locale for a single field](#example-hide-specific-locale-for-a-single-field)
 - [Locale not editable for a specific field](#example-locale-not-editable-for-a-specific-field)
 - [Conditionally set a locale visible or not editable](#example-conditionally-set-a-locale-visible-or-not-editable)
+- [Global Validation](#example-global-validation)
+- [Children Validation](#example-children-validation)
 
 ### Example: Basic Configuration
 ```ts
@@ -401,8 +403,43 @@ export default defineType({
   }),
 ```
 
+---
 
+### Example: Global Validation
+```ts
+  defineField({
+    type: 'i18n.string',
+    name: 'field3',
+    title: 'Field 3',
+    validation: (Rule) => Rule.required(),
+  }),
+```
+<p align="center">
+  <img width="80%" src="images/examples/global-validation.jpg" alt="Example: Global Validation" />
+</p>
 
+---
+
+### Example: Children Validation
+```ts
+  defineField({
+    type: 'i18n.string',
+    name: 'field2',
+    title: 'Field 2',
+    validation: (Rule) =>
+      Rule.custom((value) => {
+        return (
+          value?.en !== 'fast' || {
+            message: `You can't use the word 'fast' for en locale`,
+            paths: [['en']],
+          }
+        )
+      }),
+  }),
+```
+<p align="center">
+  <img width="80%" src="images/examples/children-validation.jpg" alt="Example: Children Validation" />
+</p>
 
 
 
