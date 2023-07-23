@@ -156,7 +156,7 @@ All error/warning messages are then collected and visible near the title of your
 - [Slider top position](#example-slider-top-position)
 - [Slider with background option](#example-slider-with-background-ui-option)
 - [Dropdown UI](#example-dropdown-ui)
-- Multiple UI on different fields
+- [Multiple UI on different fields](#example-multiple-ui-on-different-fields)
 
 ### Example: Basic Configuration
 ```ts
@@ -293,7 +293,50 @@ All error/warning messages are then collected and visible near the title of your
 <p align="center">
   <img width="80%" src="images/examples/dropdown-ui.jpg" alt="Example: Slider with background UI option" />
 </p>
-<br />
+
+---
+
+### Example: Multiple UI on different fields
+```ts
+export default defineType({
+  type: 'document',
+  name: 'testDocument',
+  title: 'Test Document',
+  fields: [
+    defineField({
+      type: 'i18n.string',
+      name: 'field1',
+      title: 'Field 1',
+    }),
+    defineField({
+      type: 'i18n.string',
+      name: 'field2',
+      title: 'Field 2',
+      options: {
+        ui: {
+          position: 'top',
+          selected: 'background'
+        }
+      }
+    }),
+    defineField({
+      type: 'i18n.string',
+      name: 'field3',
+      title: 'Field 3',
+      options: {
+        ui: {
+          type: 'dropdown'
+        }
+      }
+    })
+  ]
+})
+```
+<p align="center">
+  <img width="80%" src="images/examples/multiple-ui.jpg" alt="Example: Slider with background UI option" />
+</p>
+
+---
 
 ## License
 
