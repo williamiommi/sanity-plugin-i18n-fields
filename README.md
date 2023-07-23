@@ -149,10 +149,10 @@ All error/warning messages are then collected and visible near the title of your
 ## 🤩 Examples Examples Examples
 
 - [Basic Configuration](#example-basic-configuration)
-- [Global User Roles Visibility](#example-global-user-roles-visibility)
-- [String Field](#example-string-field)
-- [Text Field](#example-text-field)
-- [Number Field](#example-number-field)
+- [Global user roles visibility](#example-global-user-roles-visibility)
+- [String field](#example-string-field)
+- [Text field](#example-text-field)
+- [Number field](#example-number-field)
 - [Slider top position](#example-slider-top-position)
 - [Slider with background option](#example-slider-with-background-ui-option)
 - [Dropdown UI](#example-dropdown-ui)
@@ -160,9 +160,11 @@ All error/warning messages are then collected and visible near the title of your
 - [Hide specific locale for a single field](#example-hide-specific-locale-for-a-single-field)
 - [Locale not editable for a specific field](#example-locale-not-editable-for-a-specific-field)
 - [Conditionally set a locale visible or not editable](#example-conditionally-set-a-locale-visible-or-not-editable)
-- [List of Values](#example-list-of-values)
-- [Global Validation](#example-global-validation)
-- [Children Validation](#example-children-validation)
+- [List of values](#example-list-of-values)
+- [Global validation](#example-global-validation)
+- [Children validation](#example-children-validation)
+- [Alternative locale label](#example-alternative-locale-label)
+- [Alternative locale label 2](#example-alternative-locale-label-2)
 
 ### Example: Basic Configuration
 ```ts
@@ -474,9 +476,41 @@ export default defineType({
   <img width="80%" src="images/examples/children-validation.jpg" alt="Example: Children Validation" />
 </p>
 
+---
 
+### Example: Alternative Locale Label
+```ts
+  I18nFields({
+    locales: [
+      {code: 'en', label: 'EN', title: 'English', default: true},
+      {code: 'en_us', label: 'EN-US', title: 'American English'},
+      {code: 'it', label: 'IT', title: 'Italian'},
+      {code: 'es', label: 'ES', title: 'Spanish'},
+    ]
+  })
+```
+<p align="center">
+  <img width="80%" src="images/examples/alternative-locale-label.jpg" alt="Example: Alternative Locale Label" />
+</p>
 
+---
 
+### Example: Alternative Locale Label 2
+```ts
+  import {FaPizzaSlice} from 'react-icons/fa'
+  import {GiTeapot, GiBull, GiAmericanFootballBall} from 'react-icons/gi'
+  I18nFields({
+    locales: [
+      {code: 'en', label: GiTeapot, title: 'English', default: true},
+      {code: 'en_us', label: GiAmericanFootballBall, title: 'American English'},
+      {code: 'it', label: FaPizzaSlice, title: 'Italian'},
+      {code: 'es', label: GiBull, title: 'Spanish'},
+    ]
+  })
+```
+<p align="center">
+  <img width="80%" src="images/examples/alternative-locale-label-2.jpg" alt="Example: Alternative Locale Label 2" />
+</p>
 
 
 
