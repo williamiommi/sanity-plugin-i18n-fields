@@ -10,7 +10,7 @@ An alternative way to manage localization at field level in your Sanity Studio.
 - [🔌 Installation](#-installation)
 - [🧑‍💻 Usage](#-usage)
 - [⚙️ Plugin Configuration](#%EF%B8%8F-plugin-configuration)
-- [🔧 Single Instance Configuration](#-single-instance-configuration)
+- [🔧 Field Configuration](#-field-configuration)
 - [🚨 Validation](#-validation)
 - [🤩 Examples Examples Examples](#-examples-examples-examples)
 <br />
@@ -97,7 +97,7 @@ export default defineConfig({
 ```
 <br />
 
-## 🔧 Single Instance Configuration
+## 🔧 Field Configuration
 Other than a global configuration, you can tune your configuration at field level. For example for a specific field you can have a dropdown layout or you can hide a specific locale.
 ```ts
 import {ConditionalProperty, NumberOptions, StringOptions} from 'sanity'
