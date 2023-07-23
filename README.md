@@ -369,14 +369,14 @@ export default defineType({
     title: 'Field 1',
     options: {
       locales: [{
-        code: 'it',
+        code: 'en',
         readOnly: true
       }]
     }
   }),
 ```
 <p align="center">
-  <img width="80%" src="images/examples/readonly-locale-ui.jpg" alt="Example: Locale not editable for a specific field" />
+  <img width="80%" src="images/examples/readonly-locale-field.jpg" alt="Example: Locale not editable for a specific field" />
 </p>
 
 ---
