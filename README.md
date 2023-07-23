@@ -170,8 +170,7 @@ All error/warning messages are then collected and visible near the title of your
       {code: 'it', label: '🇮🇹', title: 'Italian'},
       {code: 'es', label: '🇪🇸', title: 'Spanish'},
     ]
-  })],
-})
+  })
 ```
 
 ---
@@ -185,8 +184,7 @@ All error/warning messages are then collected and visible near the title of your
       {code: 'it', label: '🇮🇹', title: 'Italian', editableFor: ['it_editor']}, // visible for everyone but editable only for administrator and it_editor roles.
       {code: 'es', label: '🇪🇸', title: 'Spanish', editableFor: ['!movie_editor']}, // visible and editable for everyone. It will be readonly for movie_editor role.
     ]
-  })],
-})
+  })
 ```
 
 ---
@@ -248,8 +246,7 @@ All error/warning messages are then collected and visible near the title of your
       {code: 'it', label: '🇮🇹', title: 'Italian'},
       {code: 'es', label: '🇪🇸', title: 'Spanish'},
     ]
-  })],
-})
+  })
 ```
 <p align="center">
   <img width="80%" src="images/examples/position-top.jpg" alt="Example: Slider top position" />
@@ -269,8 +266,7 @@ All error/warning messages are then collected and visible near the title of your
       {code: 'it', label: '🇮🇹', title: 'Italian'},
       {code: 'es', label: '🇪🇸', title: 'Spanish'},
     ]
-  })],
-})
+  })
 ```
 <p align="center">
   <img width="80%" src="images/examples/selected-background.jpg" alt="Example: Slider with background UI option" />
@@ -290,8 +286,7 @@ All error/warning messages are then collected and visible near the title of your
       {code: 'it', label: '🇮🇹', title: 'Italian'},
       {code: 'es', label: '🇪🇸', title: 'Spanish'},
     ]
-  })],
-})
+  })
 ```
 <p align="center">
   <img width="80%" src="images/examples/dropdown-ui.jpg" alt="Example: Dropdown UI" />
