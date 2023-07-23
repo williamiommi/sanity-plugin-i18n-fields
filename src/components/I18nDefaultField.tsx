@@ -18,7 +18,8 @@ const I18nDefaultField = (
     name: currentPath,
     collapsed,
     validation,
-    inputProps: {members, renderField, renderInput, renderItem, renderPreview},
+    inputProps,
+    inputProps: {members},
     schemaType: {options: fieldOptions, hidden: fieldHidden, readOnly: fieldReadOnly},
     renderDefault,
   } = props
@@ -90,10 +91,7 @@ const I18nDefaultField = (
                   ...member,
                   field: {...member.field, schemaType: {...member.field.schemaType, title: ''}}, // here to avoid issue with the left menu for document errors
                 }}
-                renderField={renderField}
-                renderInput={renderInput}
-                renderItem={renderItem}
-                renderPreview={renderPreview}
+                {...inputProps}
               />
             </div>
           )
