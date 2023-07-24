@@ -53,7 +53,7 @@ export default defineConfig({
 })
 ```
 The plugin will provide three new types: `i18n.string`, `i18n.text`, and `i18n.number`. All three types will be objects with a dynamic number of fields based on the localizations provided during configuration.
-<br />
+<br /><br /><br />
 
 ## ⚙️ Plugin Configuration
 This is the main configuration of the plugin, and the available options are as follows:
