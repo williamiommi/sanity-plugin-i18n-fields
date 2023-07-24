@@ -16,7 +16,7 @@ An alternative way to manage localization at field level in your Sanity Studio.
 - [🤩 Examples Examples Examples](#-examples-examples-examples)
 - [👀 Next Steps](#-next-steps)
 - [📝 License](#-license)
-- [🧪 Develop & test](#-develop-&-test)
+- [🧪 Develop & test](#-develop--test)
 <br />
 
 ## ⚡️ Features
@@ -551,11 +551,11 @@ export default defineType({
 TODO
 <br />
 
-## License
+## 📝 License
 
 [MIT](LICENSE) © William Iommi
 
-## Develop & test
+## 🧪 Develop & test
 
 This plugin uses [@sanity/plugin-kit](https://github.com/sanity-io/plugin-kit)
 with default configuration for build & watch scripts.
