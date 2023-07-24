@@ -14,6 +14,9 @@ An alternative way to manage localization at field level in your Sanity Studio.
 - [🗃️ Data Model](#%EF%B8%8F-data-model)
 - [🚨 Validation](#-validation)
 - [🤩 Examples Examples Examples](#-examples-examples-examples)
+- [👀 Next Steps](#-next-steps)
+- [📝 License](#-license)
+- [🧪 Develop & test](#-develop-&-test)
 <br />
 
 ## ⚡️ Features
@@ -542,6 +545,11 @@ export default defineType({
 <p align="center">
   <img width="80%" src="images/examples/alternative-locale-label-2.jpg" alt="Example: Alternative Locale Label 2" />
 </p>
+<br />
+
+## 👀 Next Steps
+TODO
+<br />
 
 ## License
 
