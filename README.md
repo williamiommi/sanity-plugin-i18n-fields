@@ -11,6 +11,7 @@ An alternative way to manage localization at field level in your Sanity Studio.
 - [🧑‍💻 Usage](#-usage)
 - [⚙️ Plugin Configuration](#%EF%B8%8F-plugin-configuration)
 - [🔧 Field Configuration](#-field-configuration)
+- [🗃️ Data Model](#-data-model)
 - [🚨 Validation](#-validation)
 - [🤩 Examples Examples Examples](#-examples-examples-examples)
 <br />
@@ -131,6 +132,37 @@ export default defineType({
     })
   ]
 })
+```
+<br />
+
+## 🗃️ Data model
+```ts
+  // i18n.string with 'en', 'en_us', 'it' and 'es' locales
+  {
+    _type: 'i18n.string',
+    en: 'en value',
+    en_us: 'en_us value',
+    it: 'it value',
+    es: 'es value',
+  }
+
+  // i18n.text with 'en', 'en_us', 'it' and 'es' locales
+  {
+    _type: 'i18n.text',
+    en: 'en value',
+    en_us: 'en_us value',
+    it: 'it value',
+    es: 'es value',
+  }
+
+  // i18n.number with 'en', 'en_us', 'it' and 'es' locales
+  {
+    _type: 'i18n.number',
+    en: number,
+    en_us: number,
+    it: number,
+    es: number,
+  }
 ```
 <br />
 
