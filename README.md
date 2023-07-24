@@ -137,25 +137,24 @@ export default defineType({
 
 ## 🗃️ Data model
 ```ts
-  // i18n.string with 'en', 'en_us', 'it' and 'es' locales
+  // sample with 'en', 'en_us', 'it' and 'es' locales
+
   {
     _type: 'i18n.string',
-    en: 'en value',
-    en_us: 'en_us value',
-    it: 'it value',
-    es: 'es value',
+    en: string,
+    en_us: string,
+    it: string,
+    es: string,
   }
 
-  // i18n.text with 'en', 'en_us', 'it' and 'es' locales
   {
     _type: 'i18n.text',
-    en: 'en value',
-    en_us: 'en_us value',
-    it: 'it value',
-    es: 'es value',
+    en: string,
+    en_us: string,
+    it: string,
+    es: string,
   }
 
-  // i18n.number with 'en', 'en_us', 'it' and 'es' locales
   {
     _type: 'i18n.number',
     en: number,
