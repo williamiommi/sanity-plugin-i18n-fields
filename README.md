@@ -551,8 +551,8 @@ export default defineType({
 - New Sanity's default types (boolean, date...)
 - Filters
   - Show all locales without slider/dropdown
-  - Show fulfilled translations
-  - Show empty translations
+  - Show only fulfilled translations
+  - Show only empty translations
 - AI integration?
 - ...
 <br />
