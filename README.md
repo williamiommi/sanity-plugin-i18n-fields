@@ -11,7 +11,7 @@ An alternative way to manage localization at field level in your Sanity Studio.
 - [🧑‍💻 Usage](#-usage)
 - [⚙️ Plugin Configuration](#%EF%B8%8F-plugin-configuration)
 - [🔧 Field Configuration](#-field-configuration)
-- [🗃️ Data Model](#-data-model)
+- [🗃️ Data Model](#%EF%B8%8F-data-model)
 - [🚨 Validation](#-validation)
 - [🤩 Examples Examples Examples](#-examples-examples-examples)
 <br />
