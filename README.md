@@ -479,7 +479,7 @@ export default defineType({
 ```ts
   defineField({
     type: 'i18n.text',
-    name: 'title2',
+    name: 'title',
     title: 'Title',
     description: 'Title description',
     options: {
