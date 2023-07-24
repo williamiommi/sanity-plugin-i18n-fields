@@ -195,7 +195,7 @@ All error/warning messages are then collected and visible near the title of your
 - [Locale not editable for a specific field](#example-locale-not-editable-for-a-specific-field)
 - [Conditionally set a locale visible or not editable](#example-conditionally-set-a-locale-visible-or-not-editable)
 - [List of values](#example-list-of-values)
-- [Custom rows for i18n.text](#example-custom-rows-for-i18n.text)
+- [Custom rows for i18n.text](#example-custom-rows-for-i18ntext)
 - [Global validation](#example-global-validation)
 - [Children validation](#example-children-validation)
 - [Alternative locale label](#example-alternative-locale-label)
