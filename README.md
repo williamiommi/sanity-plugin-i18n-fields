@@ -195,6 +195,7 @@ All error/warning messages are then collected and visible near the title of your
 - [Locale not editable for a specific field](#example-locale-not-editable-for-a-specific-field)
 - [Conditionally set a locale visible or not editable](#example-conditionally-set-a-locale-visible-or-not-editable)
 - [List of values](#example-list-of-values)
+- [Custom rows for i18n.text](#example-custom-rows-for-i18n.text)
 - [Global validation](#example-global-validation)
 - [Children validation](#example-children-validation)
 - [Alternative locale label](#example-alternative-locale-label)
@@ -470,6 +471,33 @@ export default defineType({
 ```
 <p align="center">
   <img width="80%" src="images/examples/list-of-values.jpg" alt="Example: List of values" />
+</p>
+
+---
+
+### Example: Custom rows for i18n.text
+```ts
+  defineField({
+    type: 'i18n.text',
+    name: 'title2',
+    title: 'Title',
+    description: 'Title description',
+    options: {
+      rows: 10,
+      locales: [
+        {
+          code: 'it',
+          options: {
+            rows: 5,
+          },
+        },
+      ],
+    },
+  }),
+```
+<p align="center">
+  <img width="80%" src="images/examples/custom-rows.jpg" alt="Example: Custom rows for i18n.text" />
+  <img width="80%" src="images/examples/custom-rows2.jpg" alt="Example: Custom rows for i18n.text" />
 </p>
 
 ---
