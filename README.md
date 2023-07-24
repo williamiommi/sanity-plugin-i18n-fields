@@ -14,7 +14,7 @@ An alternative way to manage localization at field level in your Sanity Studio.
 - [🗃️ Data Model](#%EF%B8%8F-data-model)
 - [🚨 Validation](#-validation)
 - [🤩 Examples Examples Examples](#-examples-examples-examples)
-- [👀 Next Steps](#-next-steps)
+- [👀 Future features](#-future-features)
 - [📝 License](#-license)
 - [🧪 Develop & test](#-develop--test)
 <br />
@@ -547,8 +547,14 @@ export default defineType({
 </p>
 <br />
 
-## 👀 Next Steps
-TODO
+## 👀 Future features
+- New Sanity's default types (boolean, date...)
+- Filters
+  - Show all locales without slider/dropdown
+  - Show fulfilled translations
+  - Show empty translations
+- AI integration?
+- ...
 <br />
 
 ## 📝 License
