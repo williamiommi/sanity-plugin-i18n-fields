@@ -22,12 +22,12 @@ An alternative way to manage localization at field level in your Sanity Studio.
 ## ⚡️ Features
 
 - Sanity v3 plugin.
-- Field level localization for the following Sanity types: `string`, `text`, and `number`.
+- Field-level localization for the following Sanity types: string, text, and number.
 - Optional UI (slider or dropdown).
 - Locale visibility by user roles.
-- Locale readonly by user roles.
+- Locale read-only by user roles.
 - Object Validation.
-- Customization available not only at the plugin level but also at field level.
+- Customization available not only at plugin level but also at field level.
 <br />
 
 ## 🔌 Installation
@@ -52,28 +52,28 @@ export default defineConfig({
   })],
 })
 ```
-The plugin will provide 3 new types: `i18n.string`, `i18n.text` and `i18n.number`. All 3 types will be objects with a dynamic number of fields based on the localizations provided during configuration.\
+The plugin will provide three new types: `i18n.string`, `i18n.text`, and `i18n.number`. All three types will be objects with a dynamic number of fields based on the localizations provided during configuration.
 <br />
 
 ## ⚙️ Plugin Configuration
-This is the main configuration of the plugin. The available options are the following:
+This is the main configuration of the plugin, and the available options are as follows:
 ```ts
 {
-  // the ui option it lets you play with the UI of the plugin.
+  // The 'ui' option allows you to customize the appearance of the plugin's UI. By default, it is set to 'slider'.
   ui?: {
-    type?: 'slider' | 'dropdown' // the ui of the plugin. Default is 'slider'
-    position?: 'top' | 'bottom' // the position of the 'slider', above or below the input field. Default is 'bottom'
-    selected?: 'border' | 'background' // the ui of the selected locale when type is 'slider'. Default is 'border'
+    type?: 'slider' | 'dropdown' // The UI of the plugin, Default is 'slider'
+    position?: 'top' | 'bottom' // You can specify the position of the 'slider' above or below the input field, with the default being 'bottom'.
+    selected?: 'border' | 'background' // For the 'slider' type, you can configure the UI of the selected locale, and the default setting is 'border'.
   },
-  // the locales option is the core of the configuration. It lets you configure all the available locales of your project.
+  // The 'locales' option is the core of the configuration, enabling you to set up all available locales for your project.
   locales: [
     {
       code: string // the code of the locale
       label: ReactNode // the label of the locale
       title: string // the title of the locale
-      default?: boolean // the flag to identify the default locale. If true, the locale is in the first position
-      visibleFor?: string[] // List of roles for which this locale is visible. Using the '!' operator, it is possible to make it not visibile
-      editableFor?: string[] // List of roles for which this locale is editable. Using the '!' operator, it is possible to do the opposite
+      default?: boolean // This is the flag to identify the default locale. If set to true, the locale is placed in the first position.
+      visibleFor?: string[] // You can define a list of roles for which this locale is visible. By using the '!' operator, you can make it not visible.
+      editableFor?: string[] // You can define a list of roles for which this locale is editable. The '!' operator allows you to specify the opposite condition.
     },
     // other locales
   ]
@@ -102,7 +102,7 @@ export default defineConfig({
 <br />
 
 ## 🔧 Field Configuration
-Other than a global configuration, you can tune your configuration at field level. For example for a specific field you can have a dropdown layout or you can hide a specific locale.
+Other than global configuration, you can customize your configuration at field level. For example, for a specific field, you can have a dropdown layout or hide a particular locale.
 ```ts
 import {ConditionalProperty, NumberOptions, StringOptions} from 'sanity'
 
@@ -122,12 +122,12 @@ export default defineType({
         },
         locales?: [
             {
-              code: string // the code of the locale. MUST be the same of the one used in the global configuration
+              code: string // the code of the locale. MUST be the same as the one used in the global configuration.
               readOnly?: ConditionalProperty
               hidden?: ConditionalProperty
               options?: StringOptions | { rows?:number } | NumberOptions
-              visibleFor?: string[] // List of roles for which this locale is visible. Using the '!' operator, it is possible to make it not visibile
-              editableFor?: string[] // List of roles for which this locale is editable. Using the '!' operator, it is possible to do the opposite
+              visibleFor?: string[] // same as global configuration
+              editableFor?: string[] // same as global configuration
             },
             // other locales
           ]
@@ -169,7 +169,7 @@ export default defineType({
 <br />
 
 ## 🚨 Validation
-Since the new types introduced by the plugin are objects, you can use [children validation](https://www.sanity.io/docs/validation#9e69d5db6f72) to address specific validation on a specific locale.
+Since the new types introduced by the plugin are objects, you can use [children validation](https://www.sanity.io/docs/validation#9e69d5db6f72) to apply specific validation to a particular locale.
 All error/warning messages are then collected and visible near the title of your field or in the right menu.
 
 <p align="center">
@@ -548,12 +548,12 @@ export default defineType({
 <br />
 
 ## 👀 Future features
-- New Sanity's default types (boolean, date...)
+- New Sanity default types (boolean, date...)
 - Filters
   - Show all locales without slider/dropdown
   - Show only fulfilled translations
   - Show only empty translations
-- AI integration?
+- AI integration? 🤔
 - ...
 <br />
 
