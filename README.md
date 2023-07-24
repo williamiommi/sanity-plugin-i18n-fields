@@ -512,32 +512,6 @@ export default defineType({
   <img width="80%" src="images/examples/alternative-locale-label-2.jpg" alt="Example: Alternative Locale Label 2" />
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## License
 
 [MIT](LICENSE) © William Iommi
