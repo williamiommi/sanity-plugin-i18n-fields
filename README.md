@@ -218,6 +218,8 @@ All error/warning messages are then collected and visible near the title of your
 
 ---
 
+<br/>
+
 ### Example: Global User Roles Visibility
 ```ts
   I18nFields({
@@ -231,6 +233,8 @@ All error/warning messages are then collected and visible near the title of your
 ```
 
 ---
+
+<br/>
 
 ### Example: String Field
 ```ts
@@ -247,6 +251,8 @@ All error/warning messages are then collected and visible near the title of your
 
 ---
 
+<br/>
+
 ### Example: Text Field
 ```ts
   defineField({
@@ -262,6 +268,8 @@ All error/warning messages are then collected and visible near the title of your
 
 ---
 
+<br/>
+
 ### Example: Number Field
 ```ts
   defineField({
@@ -276,6 +284,8 @@ All error/warning messages are then collected and visible near the title of your
 </p>
 
 ---
+
+<br/>
 
 ### Example: Slider top position
 ```ts
@@ -297,6 +307,8 @@ All error/warning messages are then collected and visible near the title of your
 
 ---
 
+<br/>
+
 ### Example: Slider with background UI option
 ```ts
   I18nFields({
@@ -317,6 +329,8 @@ All error/warning messages are then collected and visible near the title of your
 
 ---
 
+<br/>
+
 ### Example: Dropdown UI
 ```ts
   I18nFields({
@@ -336,6 +350,8 @@ All error/warning messages are then collected and visible near the title of your
 </p>
 
 ---
+
+<br/>
 
 ### Example: Multiple UI on different fields
 ```ts
@@ -379,6 +395,8 @@ export default defineType({
 
 ---
 
+<br/>
+
 ### Example: Hide specific locale for a single field
 ```ts
   defineField({
@@ -399,6 +417,8 @@ export default defineType({
 
 ---
 
+<br/>
+
 ### Example: Locale not editable for a specific field
 ```ts
   defineField({
@@ -418,6 +438,8 @@ export default defineType({
 </p>
 
 ---
+
+<br/>
 
 ### Example: Conditionally set a locale visible or not editable
 ```ts
@@ -445,6 +467,8 @@ export default defineType({
 ```
 
 ---
+
+<br/>
 
 ### Example: List of values
 ```ts
@@ -478,6 +502,8 @@ export default defineType({
 
 ---
 
+<br/>
+
 ### Example: Custom rows for i18n.text
 ```ts
   defineField({
@@ -505,6 +531,8 @@ export default defineType({
 
 ---
 
+<br/>
+
 ### Example: Global Validation
 ```ts
   defineField({
@@ -519,6 +547,8 @@ export default defineType({
 </p>
 
 ---
+
+<br/>
 
 ### Example: Children Validation
 ```ts
@@ -543,6 +573,8 @@ export default defineType({
 
 ---
 
+<br/>
+
 ### Example: Alternative Locale Label
 ```ts
   I18nFields({
@@ -559,6 +591,8 @@ export default defineType({
 </p>
 
 ---
+
+<br/>
 
 ### Example: Alternative Locale Label 2
 ```ts
@@ -578,6 +612,8 @@ export default defineType({
 </p>
 
 ---
+
+<br/>
 
 ### Example: Customized prefix
 ```ts
