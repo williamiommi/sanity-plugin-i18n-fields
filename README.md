@@ -28,6 +28,7 @@ An alternative way to manage localization at field level in your Sanity Studio.
 - Locale read-only by user roles.
 - Object Validation.
 - Customization available not only at plugin level but also at field level.
+- Customizable types prefix.
 <br />
 
 ## 🔌 Installation
@@ -53,12 +54,13 @@ export default defineConfig({
 })
 ```
 The plugin will provide three new types: `i18n.string`, `i18n.text`, and `i18n.number`. All three types will be objects with a dynamic number of fields based on the localizations provided during configuration.
-<br /><br /><br />
+<br />
 
 ## ⚙️ Plugin Configuration
 This is the main configuration of the plugin, and the available options are as follows:
 ```ts
 {
+  prefix?: string // You can configure the prefix of the types created by the plugin. If you are already using them or prefer a different name for any reason, you can change it. The default is 'i18n'.
   // The 'ui' option allows you to customize the appearance of the plugin's UI. By default, it is set to 'slider'.
   ui?: {
     type?: 'slider' | 'dropdown' // The UI of the plugin, Default is 'slider'
@@ -200,6 +202,7 @@ All error/warning messages are then collected and visible near the title of your
 - [Children validation](#example-children-validation)
 - [Alternative locale label](#example-alternative-locale-label)
 - [Alternative locale label 2](#example-alternative-locale-label-2)
+- [Customized prefix](#example-customized-prefix)
 
 ### Example: Basic Configuration
 ```ts
@@ -573,6 +576,50 @@ export default defineType({
 <p align="center">
   <img width="80%" src="images/examples/alternative-locale-label-2.jpg" alt="Example: Alternative Locale Label 2" />
 </p>
+
+---
+
+### Example: Customized prefix
+```ts
+  I18nFields({
+    prefix: 'myAwesomePrefix',
+    locales: [
+      {code: 'en', label: '🇬🇧', title: 'English', default: true},
+      {code: 'en_us', label: '🇺🇸🇬🇧', title: 'American English'},
+      {code: 'it', label: '🇮🇹', title: 'Italian'},
+      {code: 'es', label: '🇪🇸', title: 'Spanish'},
+    ]
+  })
+```
+As result of this customization, instead of having the default types, you are going to have the following ones:
+
+- `myAwesomePrefix.string`
+- `myAwesomePrefix.text`
+- `myAwesomePrefix.number`
+
+You are going to lose typescript definitions since you are not using `ì18n.string`, `ì18n.text` or `i18n.number` types, but you can override in your project doing something like this:
+
+```ts
+//custom.types.d.ts
+
+import {
+  I18nNumberDefinition,
+  I18nStringDefinition,
+  I18nTextDefinition,
+} from 'sanity-plugin-i18n-fields'
+
+declare module 'sanity' {
+  export interface IntrinsicDefinitions {
+    'myAwesomePrefix.string': Omit<I18nStringDefinition, 'type'> & {type: 'myAwesomePrefix.string'}
+  }
+  export interface IntrinsicDefinitions {
+    'myAwesomePrefix.text': Omit<I18nTextDefinition, 'type'> & {type: 'myAwesomePrefix.text'}
+  }
+  export interface IntrinsicDefinitions {
+    'myAwesomePrefix.number': Omit<I18nNumberDefinition, 'type'> & {type: 'myAwesomePrefix.number'}
+  }
+}
+```
 <br />
 
 ## 👀 Future features
@@ -584,6 +631,10 @@ export default defineType({
 - AI integration? 🤔
 - ...
 <br />
+
+> While writing this documentation, I realized that with the 'prefix' option, you can define the plugin multiple times with different prefixes.
+> Codes and Labels are customizable, and this plugin could be used for other use cases, not only for internationalization.
+> So, perhaps the name 'I18N Fields' is already outdated? 😅 Should I find a different name? Any suggestions? 😂
 
 ## 📝 License
 
