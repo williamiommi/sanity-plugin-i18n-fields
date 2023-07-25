@@ -632,8 +632,10 @@ declare module 'sanity' {
 - ...
 <br /><br />
 
-> While writing this documentation, I realized that with the 'prefix' option, you can define the plugin multiple times with different prefixes.\
-> Codes and Labels are customizable, and this plugin could be used for other use cases, not only for internationalization.\
+> While writing this documentation, I realized that with the 'prefix' option, you can define the plugin multiple times with different prefixes.
+>
+> Codes and Labels are customizable, and this plugin could be used for other use cases, not only for internationalization.
+>
 > So, perhaps the name 'I18N Fields' is already outdated? 😅 Should I find a different name? Any suggestions? 😂
 
 <br /><br />
