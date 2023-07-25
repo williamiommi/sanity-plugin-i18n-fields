@@ -25,6 +25,7 @@ export interface I18nTextOptions {
 }
 
 export interface I18nFieldsConfig {
+  prefix?: string
   locales: Locale[]
   ui?: I18nFieldsConfigUI
 }

@@ -1,6 +1,6 @@
 import {FieldMember, ObjectMember, TextSchemaType} from 'sanity'
 import {InternalLocale} from '../types/Locale'
-import {EMPTY_FORM_NODE_VALIDATION} from '../lib/conts'
+import {EMPTY_FORM_NODE_VALIDATION} from '../lib/constants'
 import {I18nFieldType} from '../types/I18nFields'
 
 interface useMembersInfoProps {

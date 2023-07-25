@@ -1,4 +1,4 @@
-import {ROLE_ADMIN} from './conts'
+import {ROLE_ADMIN} from './constants'
 
 const userCan = (userRoles: string[], restrictedRoles?: string[]): boolean => {
   if (!restrictedRoles || restrictedRoles.length === 0) return true
