@@ -627,13 +627,13 @@ export default defineType({
     ]
   })
 ```
-As result of this customization, instead of having the default types, you are going to have the following ones:
+As a result of this customization, instead of having the default types, you will have the following ones:
 
 - `myAwesomePrefix.string`
 - `myAwesomePrefix.text`
 - `myAwesomePrefix.number`
 
-You are going to lose typescript definitions since you are not using `ì18n.string`, `ì18n.text` or `i18n.number` types, but you can override in your project doing something like this:
+You will lose TypeScript definitions since you are not using `i18n.string`, `i18n.text`, or `i18n.number` types. However, you can override them in your project by doing something like this:
 
 ```ts
 //custom.types.d.ts
