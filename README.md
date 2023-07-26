@@ -184,8 +184,8 @@ All error/warning messages are then collected and visible near the title of your
 
 ## 🤩 Examples Examples Examples
 
-- [Basic Configuration](#example-basic-configuration)
-- [Global user roles visibility](#example-global-user-roles-visibility)
+- [Basic Configuration](docs/examples/basic-configuration)
+- [Global user roles visibility](docs/examples/global-user-roles-visibility.md)
 - [String field](#example-string-field)
 - [Text field](#example-text-field)
 - [Number field](#example-number-field)
@@ -203,38 +203,6 @@ All error/warning messages are then collected and visible near the title of your
 - [Alternative locale label](#example-alternative-locale-label)
 - [Alternative locale label 2](#example-alternative-locale-label-2)
 - [Customized prefix](#example-customized-prefix)
-
-### Example: Basic Configuration
-```ts
-  I18nFields({
-    locales: [
-      {code: 'en', label: '🇬🇧', title: 'English', default: true},
-      {code: 'en_us', label: '🇺🇸🇬🇧', title: 'American English'},
-      {code: 'it', label: '🇮🇹', title: 'Italian'},
-      {code: 'es', label: '🇪🇸', title: 'Spanish'},
-    ]
-  })
-```
-
----
-
-<br/>
-
-### Example: Global User Roles Visibility
-```ts
-  I18nFields({
-    locales: [
-      {code: 'en', label: '🇬🇧', title: 'English', default: true},
-      {code: 'en_us', label: '🇺🇸🇬🇧', title: 'American English', visibleFor: ['us_editor']}, // visible only for administrator and us_editor roles
-      {code: 'it', label: '🇮🇹', title: 'Italian', editableFor: ['it_editor']}, // visible for everyone but editable only for administrator and it_editor roles.
-      {code: 'es', label: '🇪🇸', title: 'Spanish', editableFor: ['!movie_editor']}, // visible and editable for everyone. It will be readonly for movie_editor role.
-    ]
-  })
-```
-
----
-
-<br/>
 
 ### Example: String Field
 ```ts
