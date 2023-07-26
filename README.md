@@ -184,11 +184,11 @@ All error/warning messages are then collected and visible near the title of your
 
 ## 🤩 Examples Examples Examples
 
-- [Basic Configuration](docs/examples/basic-configuration)
+- [Basic Configuration](docs/examples/basic-configuration.md)
 - [Global user roles visibility](docs/examples/global-user-roles-visibility.md)
-- [String field](#example-string-field)
-- [Text field](#example-text-field)
-- [Number field](#example-number-field)
+- [String field](docs/examples/string-field.md)
+- [Text field](docs/examples/text-field.md)
+- [Number field](docs/examples/number-field.md)
 - [Slider top position](#example-slider-top-position)
 - [Slider with background option](#example-slider-with-background-ui-option)
 - [Dropdown UI](#example-dropdown-ui)
@@ -203,57 +203,6 @@ All error/warning messages are then collected and visible near the title of your
 - [Alternative locale label](#example-alternative-locale-label)
 - [Alternative locale label 2](#example-alternative-locale-label-2)
 - [Customized prefix](#example-customized-prefix)
-
-### Example: String Field
-```ts
-  defineField({
-    type: 'i18n.string',
-    name: 'title',
-    title: 'Title',
-    description: 'Title description',
-  })
-```
-<p align="center">
-  <img width="80%" src="images/examples/string-field.jpg" alt="Example: String Field" />
-</p>
-
----
-
-<br/>
-
-### Example: Text Field
-```ts
-  defineField({
-    type: 'i18n.text',
-    name: 'title',
-    title: 'Title',
-    description: 'Title description',
-  })
-```
-<p align="center">
-  <img width="80%" src="images/examples/text-field.jpg" alt="Example: Text Field" />
-</p>
-
----
-
-<br/>
-
-### Example: Number Field
-```ts
-  defineField({
-    type: 'i18n.number',
-    name: 'title',
-    title: 'Title',
-    description: 'Title description',
-  })
-```
-<p align="center">
-  <img width="80%" src="images/examples/number-field.jpg" alt="Example: Number Field" />
-</p>
-
----
-
-<br/>
 
 ### Example: Slider top position
 ```ts
