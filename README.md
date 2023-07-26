@@ -203,6 +203,7 @@ All error/warning messages are then collected and visible near the title of your
 - [Alternative locale label](docs/examples/alternative-locale-label.md)
 - [Alternative locale label 2](docs/examples//alternative-locale-label-2.md)
 - [Customized prefix](docs/examples//customized-prefix.md)
+<br /><br />
 
 ## 👀 Future features
 - New Sanity default types (boolean, date...)
