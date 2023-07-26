@@ -1,9 +1,9 @@
-# 🌍 i18n fields
+# <img width="50" src="docs/images/logo.svg" alt="I18n Fields Logo"/> I18n fields
 
 An alternative way to manage localization at field level in your Sanity Studio.
 
 <p align="center">
-  <img src="docs/images/logo.jpg" alt="I18n Fields Logo" />
+  <img width="15%" src="docs/images/logo.svg" alt="I18n String Field Sample"/>
 </p>
 <p align="center">
   <img width="80%" src="docs/images/hero.jpg" alt="I18n String Field Sample"/>
