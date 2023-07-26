@@ -3,6 +3,9 @@
 An alternative way to manage localization at field level in your Sanity Studio.
 
 <p align="center">
+  <img src="docs/images/logo.jpg" alt="I18n Fields Logo" />
+</p>
+<p align="center">
   <img width="80%" src="docs/images/hero.jpg" alt="I18n String Field Sample"/>
 </p>
 
