@@ -3,7 +3,7 @@
 An alternative way to manage localization at field level in your Sanity Studio.
 
 <p align="center">
-  <img width="80%" src="images/hero.jpg" alt="I18n String Field Sample"/>
+  <img width="80%" src="docs/images/hero.jpg" alt="I18n String Field Sample"/>
 </p>
 
 - [⚡️ Features](#%EF%B8%8F-features)
@@ -175,10 +175,10 @@ Since the new types introduced by the plugin are objects, you can use [children 
 All error/warning messages are then collected and visible near the title of your field or in the right menu.
 
 <p align="center">
-  <img width="80%" src="images/hero-validation.jpg" alt="Validation Sample"/>
+  <img width="80%" src="docs/images/hero-validation.jpg" alt="Validation Sample"/>
 </p>
 <p align="center">
-  <img width="80%" src="images/hero-validation2.jpg" alt="Validation Sample"/>
+  <img width="80%" src="docs/images/hero-validation2.jpg" alt="Validation Sample"/>
 </p>
 <br />
 
