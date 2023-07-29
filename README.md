@@ -74,7 +74,7 @@ This is the main configuration of the plugin, and the available options are as f
   locales: [
     {
       code: string // the code of the locale
-      label: ReactNode // the label of the locale
+      label: ReactNode | ComponentType // the label of the locale
       title: string // the title of the locale
       default?: boolean // This is the flag to identify the default locale. If set to true, the locale is placed in the first position.
       visibleFor?: string[] // You can define a list of roles for which this locale is visible. By using the '!' operator, you can make it not visible.
