@@ -8,6 +8,7 @@ An alternative way to manage localization at field level in your Sanity Studio.
 <p align="center">
   <img width="80%" src="docs/images/hero.jpg" alt="I18n String Field Sample"/>
 </p>
+<br />
 
 - [⚡️ Features](#%EF%B8%8F-features)
 - [🔌 Installation](#-installation)
