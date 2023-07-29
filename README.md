@@ -26,12 +26,12 @@ An alternative way to manage localization at field level in your Sanity Studio.
 ## ⚡️ Features
 
 - Sanity v3 plugin.
-- Field-level localization for the following Sanity types: string, text, and number.
+- Field-level localization for the following Sanity types: `string`, `text`, and `number`.
 - Optional UI (slider or dropdown).
 - Locale visibility by user roles.
 - Locale read-only by user roles.
 - Object Validation.
-- Customization available not only at plugin level but also at field level.
+- Customization available also at field level.
 - Customizable types prefix.
 <br />
 
