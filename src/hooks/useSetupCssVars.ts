@@ -18,7 +18,7 @@ const useSetupCssVars = (): void => {
       '--i18n-bg-hover',
       sanityTheme.sanity.color.card.hovered.bg
     )
-  }, [])
+  }, [sanityTheme.sanity.color.dark]) // update colors when switching dark/light theme
 }
 
 export default useSetupCssVars
