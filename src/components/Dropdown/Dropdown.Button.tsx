@@ -27,7 +27,7 @@ const DropdownButton = ({activeLocale}: DropdownButtonProps) => {
         <div className="-content">
           <ErrorWarningIcons locale={activeLocale} />
           <span className="-label">
-            <IconLabel Label={activeLocale.label} />
+            <IconLabel label={activeLocale.label} />
             {activeLocale.isChanged && (
               <EditIcon fontSize={12} color={sanityTheme.sanity.color.solid.caution.hovered.bg} />
             )}

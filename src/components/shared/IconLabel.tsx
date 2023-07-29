@@ -1,12 +1,14 @@
-import {ReactElement} from 'react'
+import {ComponentType, ReactNode, createElement, isValidElement} from 'react'
+import {isValidElementType} from 'react-is'
 
 interface IconLabelProps {
-  Label: string | (() => ReactElement)
+  label: ReactNode | ComponentType
 }
 
-const IconLabel = ({Label}: IconLabelProps) => {
-  if (typeof Label === 'string') return Label
-  return <Label />
+const IconLabel = ({label}: IconLabelProps) => {
+  if (isValidElement(label) || typeof label === 'string' || typeof label === 'number') return label
+  if (isValidElementType(label)) return createElement(label)
+  return 'something went wrong'
 }
 
 export default IconLabel

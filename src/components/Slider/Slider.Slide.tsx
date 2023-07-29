@@ -47,7 +47,7 @@ const Slide = ({name, locale, index, isSelected, pluginUi, onClick}: SlideProps)
       >
         <ErrorWarningIcons locale={locale} />
         <span className="-label">
-          <IconLabel Label={locale.label} />
+          <IconLabel label={locale.label} />
         </span>
         {locale.isChanged && (
           <EditIcon fontSize={12} color={sanityTheme.sanity.color.solid.caution.hovered.bg} />
