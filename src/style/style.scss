@@ -33,10 +33,36 @@
 }
 
 .i18n--slider-language {
+  position: relative;
   display: flex;
   margin: 5px 0 10px 0;
   transition: opacity 0.3s ease-in-out;
   order: 0;
+
+  &::before,
+  &::after {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    z-index: 2;
+  }
+
+  &[data-begin='false'] {
+    &::before {
+      content: '';
+      left: 0;
+      background-image: linear-gradient(to right, var(--i18n-base-bg), transparent);
+    }
+  }
+
+  &[data-end='false'] {
+    &::after {
+      content: '';
+      right: 0;
+      background-image: linear-gradient(to left, var(--i18n-base-bg), transparent);
+    }
+  }
+
   &[data-position='bottom'] {
     order: 1;
     margin: 7px 0 0;

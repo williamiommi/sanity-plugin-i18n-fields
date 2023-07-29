@@ -5,6 +5,7 @@ import {useEffect} from 'react'
 const useSetupCssVars = (): void => {
   const sanityTheme = useTheme()
   useEffect(() => {
+    document.documentElement.style.setProperty('--i18n-base-bg', sanityTheme.sanity.color.base.bg)
     document.documentElement.style.setProperty(
       '--i18n-readOnly-warning',
       sanityTheme.sanity.color.solid.caution.hovered.bg

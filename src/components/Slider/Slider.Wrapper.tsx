@@ -17,6 +17,26 @@ const SliderWrapper = ({name, pluginUi, locales, activeLocale, onClick}: SliderW
     {
       mode: 'free',
       slides: {perView: 'auto', spacing: 5},
+      created(keen) {
+        const {
+          container,
+          track: {
+            details: {progress},
+          },
+        } = keen
+        container.dataset.begin = `true`
+        container.dataset.end = `${!!isNaN(progress)}`
+      },
+      dragged(keen) {
+        const {
+          container,
+          track: {
+            details: {progress},
+          },
+        } = keen
+        container.dataset.begin = `${progress <= 0.05}`
+        container.dataset.end = `${progress >= 0.95}`
+      },
     },
     []
   )
