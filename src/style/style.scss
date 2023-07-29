@@ -34,18 +34,12 @@
 
 .i18n--slider-language {
   display: flex;
-  gap: 5px;
   margin: 5px 0 10px 0;
-  opacity: 0;
   transition: opacity 0.3s ease-in-out;
   order: 0;
   &[data-position='bottom'] {
     order: 1;
     margin: 7px 0 0;
-  }
-
-  &[data-ready='true'] {
-    opacity: 1;
   }
 
   &-slide {
@@ -134,7 +128,7 @@
   text-align: center;
 
   button {
-    background: none!important;
+    background: none !important;
   }
 }
 
