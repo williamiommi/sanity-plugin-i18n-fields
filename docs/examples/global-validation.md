@@ -8,5 +8,5 @@
   }),
 ```
 <p align="center">
-  <img width="80%" src="../images/examples/global-validation.jpg" alt="Example: Global Validation" />
+  <img width="80%" src="https://raw.githubusercontent.com/williamiommi/sanity-plugin-i18n-fields/main/docs/images/examples/global-validation.jpg" alt="Example: Global Validation" />
 </p>

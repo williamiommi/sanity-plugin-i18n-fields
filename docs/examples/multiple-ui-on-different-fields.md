@@ -35,5 +35,5 @@ export default defineType({
 })
 ```
 <p align="center">
-  <img width="80%" src="../images/examples/multiple-ui.jpg" alt="Example: Multiple UI on different fields" />
+  <img width="80%" src="https://raw.githubusercontent.com/williamiommi/sanity-plugin-i18n-fields/main/docs/images/examples/multiple-ui.jpg" alt="Example: Multiple UI on different fields" />
 </p>
