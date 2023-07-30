@@ -1,9 +1,8 @@
 import {Dispatch, SetStateAction} from 'react'
-import 'keen-slider/keen-slider.min.css'
-import {useKeenSlider} from 'keen-slider/react'
 import {I18nFieldsConfigUI} from '../../types/I18nFields'
 import {InternalLocale} from '../../types/Locale'
 import Slide from './Slider.Slide'
+import useSlider from '../../hooks/useSlider'
 
 interface SliderWrapperProps {
   name: string | undefined
@@ -13,34 +12,7 @@ interface SliderWrapperProps {
   onClick: Dispatch<SetStateAction<string>>
 }
 const SliderWrapper = ({name, pluginUi, locales, activeLocale, onClick}: SliderWrapperProps) => {
-  const [keenRef] = useKeenSlider<HTMLDivElement>(
-    {
-      mode: 'free',
-      slides: {perView: 'auto', spacing: 5},
-      created(keen) {
-        const {
-          container,
-          track: {
-            details: {progress},
-          },
-        } = keen
-        container.dataset.begin = `true`
-        container.dataset.end = `${!!isNaN(progress)}`
-      },
-      dragged(keen) {
-        const {
-          container,
-          track: {
-            details: {progress},
-          },
-        } = keen
-        container.dataset.begin = `${progress <= 0.05}`
-        container.dataset.end = `${progress >= 0.95}`
-      },
-    },
-    []
-  )
-
+  const keenRef = useSlider()
   return (
     <div
       ref={keenRef}
