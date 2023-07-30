@@ -25,5 +25,5 @@
   }),
 ```
 <p align="center">
-  <img width="80%" src="../images/examples/list-of-values.jpg" alt="Example: List of values" />
+  <img width="80%" src="https://raw.githubusercontent.com/williamiommi/sanity-plugin-i18n-fields/main/docs/images/examples/list-of-values.jpg" alt="Example: List of values" />
 </p>

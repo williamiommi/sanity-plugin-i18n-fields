@@ -8,5 +8,5 @@
   })
 ```
 <p align="center">
-  <img width="80%" src="../images/examples/text-field.jpg" alt="Example: Text Field" />
+  <img width="80%" src="https://raw.githubusercontent.com/williamiommi/sanity-plugin-i18n-fields/main/docs/images/examples/text-field.jpg" alt="Example: Text Field" />
 </p>
