@@ -1,26 +1,7 @@
-import {definePlugin} from 'sanity'
+import './style/style.scss'
 
-interface MyPluginConfig {
-  /* nothing here yet */
-}
+export {I18nFields} from './plugin'
 
-/**
- * Usage in `sanity.config.ts` (or .js)
- *
- * ```ts
- * import {defineConfig} from 'sanity'
- * import {myPlugin} from 'sanity-plugin-i18n-fields'
- *
- * export default defineConfig({
- *   // ...
- *   plugins: [myPlugin()],
- * })
- * ```
- */
-export const myPlugin = definePlugin<MyPluginConfig | void>((config = {}) => {
-  // eslint-disable-next-line no-console
-  console.log('hello from sanity-plugin-i18n-fields')
-  return {
-    name: 'sanity-plugin-i18n-fields',
-  }
-})
+export * from './types/I18nFields'
+export * from './types/Locale'
+export * from './types/Sanity'
